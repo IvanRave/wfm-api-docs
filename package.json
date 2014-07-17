@@ -1,0 +1,19 @@
+{
+	"name" : "wfm-api-docs",
+	"version" : "0.1.0",
+	"description" : "WFM api docs",
+	"main" : "index.js",
+	"scripts" : {
+		"test" : "echo \"Error: no test specified\" && exit 1"
+	},
+	"author" : "",
+	"license" : "ISC",
+	"dependencies" : {
+		"express" : "^4.5.1"
+	},
+	"devDependencies" : {
+		"gulp" : "^3.7.0",
+		"gulp-jshint" : "^1.6.1",
+		"jshint-stylish" : "^0.2.0"
+	}
+}
