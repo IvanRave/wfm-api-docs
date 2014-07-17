@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var jshintReporter = require('jshint-stylish');
+var deploy = require('gulp-gh-pages');
 
 var filePath = {
 	jshintBase : {
@@ -28,4 +29,9 @@ gulp.task('test', function () {
 	gulp.src(filePath.jshintTest.src)
 	.pipe(jshint('./test/.jshintrc'))
 	.pipe(jshint.reporter(jshintReporter));
+});
+
+// https://github.com/rowoot/gulp-gh-pages
+gulp.task('deploy', function () {
+	gulp.src("./public/**/*").pipe(deploy());
 });
