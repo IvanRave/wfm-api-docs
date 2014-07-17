@@ -12,7 +12,7 @@
 	app.cnst.auth = {};
 
 	app.cnst.auth.ID_OF_AUTH_CLIENT = 'api-docs';
-	app.cnst.auth.REDIRECT_URI = '//ivanrave.github.io/wfm-api-docs/' + '/handle-auth-code.html';
+	app.cnst.auth.REDIRECT_URI = '//ivanrave.github.io/wfm-api-docs' + '/handle-auth-code.html';
   //// '//localhost:39393';
 
 	app.cnst.auth.AUTH_URI = '//petrohelp-auth.herokuapp.com' + '/dialog/authorize'
