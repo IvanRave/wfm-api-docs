@@ -61,14 +61,14 @@
 			contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
 			// TODO: #41! generate this string using one command
 			data : 'code=' + reqBody.code + '&client_id=' + reqBody.client_id + '&redirect_uri=' + reqBody.redirect_uri,
-     	xhrFields : {
-        // For CORS request to send and receive cookies
-        withCredentials : true
-      }
+			xhrFields : {
+				// For CORS request to send and receive cookies
+				withCredentials : true
+			}
 		};
 
 		// No response, just set cookies
-		$.ajax(app.cnst.API_URI + '/api/session-manager', options).done(scsNext).fail(failNext);
+		$.ajax(app.cnst.API_URI + '/api/account/session', options).done(scsNext).fail(failNext);
 	};
 
 	var openAuth = function (next) {
@@ -94,12 +94,9 @@
 				'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 	};
 
-	var handleScs = function (jqrTarget, err) {
-		if (err) {
-			return alert(err.message);
-		}
-
+	var handleScs = function (jqrTarget, accountInfoData) {
 		jqrTarget.hide();
+    $('#uname-container').text(accountInfoData.uname);
 		console.log('response from wfm-node');
 	};
 
@@ -117,6 +114,9 @@
 
 	app.authHelper.clickOpenAuthBtn = function (clickEvent) {
 		var jqrTarget = $(clickEvent.currentTarget);
+		jqrTarget.attr({
+			disabled : true
+		});
 
 		// Entire process
 		openAuth(handleAuthResult.bind(null,
