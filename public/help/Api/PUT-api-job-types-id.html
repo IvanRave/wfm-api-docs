@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-job-types-id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/job-types/{id}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/job-types/{id}</h1>
+<div>
+    <p>Put job type
+            PUT: api/job-types/{id}
+            Access: admin</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">id</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+<a href="../ResourceModel463e.html?modelName=JobTypeDto">JobTypeDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Job type id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Job type name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Job type description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CompanyId</td>
+                    <td class="parameter-documentation">
+                        <p>Job type company: this job type only for this company, other companies can not viewing this type</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: &quot;35804661-9595-4c8a-a713-430bcfa460ab&quot;,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;Description&quot;: &quot;sample string 3&quot;,
+  &quot;CompanyId&quot;: &quot;365d687b-853a-4200-80ee-eb687fa3615b&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;JobTypeDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;CompanyId&gt;365d687b-853a-4200-80ee-eb687fa3615b&lt;/CompanyId&gt;
+  &lt;Description&gt;sample string 3&lt;/Description&gt;
+  &lt;Id&gt;35804661-9595-4c8a-a713-430bcfa460ab&lt;/Id&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+&lt;/JobTypeDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;JobTypeDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"e80f40173b0f4edfb7089afbd4838e64"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-job-types-id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:37 GMT -->
+</html>

@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-well-fields-wieldId-maps by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/well-fields/{wieldId}/maps</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/well-fields/{wieldId}/maps</h1>
+<div>
+    <p>Upload well field map file
+            POST api/well-fields/{wieldId:int}/maps</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">wieldId</td>
+                    <td class="parameter-documentation">
+                        <p>Well field id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Map DTO of well field</p>
+
+<a href="../ResourceModel4a25.html?modelName=MapOfWieldDto">MapOfWieldDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Map id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Map name: by default - file name (map creates from file - FileSpec)</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Map description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ScaleCoefficient</td>
+                    <td class="parameter-documentation">
+                        <p>Map scale coefficient</p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellFieldId</td>
+                    <td class="parameter-documentation">
+                        <p>Well field (parent) id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfFileSpec</td>
+                    <td class="parameter-documentation">
+                        <p>Id of map image from FileSpec table</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileSpecDto</td>
+                    <td class="parameter-documentation">
+                        <p>File spec for this map</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModela26d.html?modelName=FileSpecDto">FileSpecDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ListOfDtoOfWellMarker</td>
+                    <td class="parameter-documentation">
+                        <p>Wells in this map</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel8190.html?modelName=WellMarkerOfMapOfWieldDto">WellMarkerOfMapOfWieldDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellFieldMapAreasDto</td>
+                    <td class="parameter-documentation">
+                        <p>Map areas</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel3f73.html?modelName=WellFieldMapAreaDto">WellFieldMapAreaDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: 1,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;Description&quot;: &quot;sample string 3&quot;,
+  &quot;ScaleCoefficient&quot;: 4.1,
+  &quot;WellFieldId&quot;: 1,
+  &quot;IdOfFileSpec&quot;: &quot;e0a74960-7f53-4627-8f80-5830588ed976&quot;,
+  &quot;FileSpecDto&quot;: {
+    &quot;Id&quot;: &quot;d6844a28-3ded-4025-9719-fafbbed0cef7&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Extension&quot;: &quot;sample string 3&quot;,
+    &quot;ContentType&quot;: &quot;sample string 4&quot;,
+    &quot;Length&quot;: 5,
+    &quot;ContainerName&quot;: &quot;72fb1721-6a37-4923-bf5c-ece62bd6cb6b&quot;,
+    &quot;CreatedUnixTime&quot;: 7,
+    &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+    &quot;ImgWidth&quot;: 1,
+    &quot;ImgHeight&quot;: 1
+  },
+  &quot;ListOfDtoOfWellMarker&quot;: [
+    {
+      &quot;CoordX&quot;: 1.0,
+      &quot;CoordY&quot;: 2.0,
+      &quot;IdOfMapOfWield&quot;: 3,
+      &quot;IdOfWell&quot;: 4,
+      &quot;IsDrilled&quot;: true
+    },
+    {
+      &quot;CoordX&quot;: 1.0,
+      &quot;CoordY&quot;: 2.0,
+      &quot;IdOfMapOfWield&quot;: 3,
+      &quot;IdOfWell&quot;: 4,
+      &quot;IsDrilled&quot;: true
+    }
+  ],
+  &quot;WellFieldMapAreasDto&quot;: [
+    {
+      &quot;Id&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;Opacity&quot;: 4.1,
+      &quot;StrokeWidth&quot;: 5.1,
+      &quot;FillColor&quot;: &quot;sample string 6&quot;,
+      &quot;Coords&quot;: &quot;sample string 7&quot;,
+      &quot;WellFieldMapId&quot;: 8
+    },
+    {
+      &quot;Id&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;Opacity&quot;: 4.1,
+      &quot;StrokeWidth&quot;: 5.1,
+      &quot;FillColor&quot;: &quot;sample string 6&quot;,
+      &quot;Coords&quot;: &quot;sample string 7&quot;,
+      &quot;WellFieldMapId&quot;: 8
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;MapOfWieldDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Description&gt;sample string 3&lt;/Description&gt;
+  &lt;FileSpecDto&gt;
+    &lt;ContainerName&gt;72fb1721-6a37-4923-bf5c-ece62bd6cb6b&lt;/ContainerName&gt;
+    &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+    &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+    &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+    &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+    &lt;Id&gt;d6844a28-3ded-4025-9719-fafbbed0cef7&lt;/Id&gt;
+    &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+    &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+    &lt;Length&gt;5&lt;/Length&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/FileSpecDto&gt;
+  &lt;Id&gt;1&lt;/Id&gt;
+  &lt;IdOfFileSpec&gt;e0a74960-7f53-4627-8f80-5830588ed976&lt;/IdOfFileSpec&gt;
+  &lt;ListOfDtoOfWellMarker&gt;
+    &lt;WellMarkerOfMapOfWieldDto&gt;
+      &lt;CoordX&gt;1&lt;/CoordX&gt;
+      &lt;CoordY&gt;2&lt;/CoordY&gt;
+      &lt;IdOfMapOfWield&gt;3&lt;/IdOfMapOfWield&gt;
+      &lt;IdOfWell&gt;4&lt;/IdOfWell&gt;
+      &lt;IsDrilled&gt;true&lt;/IsDrilled&gt;
+    &lt;/WellMarkerOfMapOfWieldDto&gt;
+    &lt;WellMarkerOfMapOfWieldDto&gt;
+      &lt;CoordX&gt;1&lt;/CoordX&gt;
+      &lt;CoordY&gt;2&lt;/CoordY&gt;
+      &lt;IdOfMapOfWield&gt;3&lt;/IdOfMapOfWield&gt;
+      &lt;IdOfWell&gt;4&lt;/IdOfWell&gt;
+      &lt;IsDrilled&gt;true&lt;/IsDrilled&gt;
+    &lt;/WellMarkerOfMapOfWieldDto&gt;
+  &lt;/ListOfDtoOfWellMarker&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;ScaleCoefficient&gt;4.1&lt;/ScaleCoefficient&gt;
+  &lt;WellFieldId&gt;1&lt;/WellFieldId&gt;
+  &lt;WellFieldMapAreasDto&gt;
+    &lt;WellFieldMapAreaDto&gt;
+      &lt;Coords&gt;sample string 7&lt;/Coords&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;FillColor&gt;sample string 6&lt;/FillColor&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Opacity&gt;4.1&lt;/Opacity&gt;
+      &lt;StrokeWidth&gt;5.1&lt;/StrokeWidth&gt;
+      &lt;WellFieldMapId&gt;8&lt;/WellFieldMapId&gt;
+    &lt;/WellFieldMapAreaDto&gt;
+    &lt;WellFieldMapAreaDto&gt;
+      &lt;Coords&gt;sample string 7&lt;/Coords&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;FillColor&gt;sample string 6&lt;/FillColor&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Opacity&gt;4.1&lt;/Opacity&gt;
+      &lt;StrokeWidth&gt;5.1&lt;/StrokeWidth&gt;
+      &lt;WellFieldMapId&gt;8&lt;/WellFieldMapId&gt;
+    &lt;/WellFieldMapAreaDto&gt;
+  &lt;/WellFieldMapAreasDto&gt;
+&lt;/MapOfWieldDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;MapOfWieldDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created well field map</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"316a8fad5bf94520b5857b425350e79b"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-well-fields-wieldId-maps by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:32 GMT -->
+</html>

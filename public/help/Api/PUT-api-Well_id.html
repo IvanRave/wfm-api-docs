@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-Well_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/Well?id={id}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/Well?id={id}</h1>
+<div>
+    <p>Put well</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">id</td>
+                    <td class="parameter-documentation">
+                        <p>Well id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Well</p>
+
+<a href="../ResourceModelfadf.html?modelName=WellDto">WellDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Well id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellGroupId</td>
+                    <td class="parameter-documentation">
+                        <p>Well group id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SketchDesc</td>
+                    <td class="parameter-documentation">
+                        <p>Sketch description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellType</td>
+                    <td class="parameter-documentation">
+                        <p>Well type</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 20</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FlowType</td>
+                    <td class="parameter-documentation">
+                        <p>Flow type</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 20</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Comment</td>
+                    <td class="parameter-documentation">
+                        <p>Well comment</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Well name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                                <p>Max length: 255</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Well description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProductionHistory</td>
+                    <td class="parameter-documentation">
+                        <p>Well production history</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CompletionType</td>
+                    <td class="parameter-documentation">
+                        <p>Completion type</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DrillingDate</td>
+                    <td class="parameter-documentation">
+                        <p>Drilling date</p>
+                    </td>
+                    <td class="parameter-type">
+                        unsigned integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FormationCompleteState</td>
+                    <td class="parameter-documentation">
+                        <p>Formation complete state</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IntegrityStatus</td>
+                    <td class="parameter-documentation">
+                        <p>Integrity status</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastInterventionDate</td>
+                    <td class="parameter-documentation">
+                        <p>Last intervention date</p>
+                    </td>
+                    <td class="parameter-type">
+                        unsigned integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastInterventionType</td>
+                    <td class="parameter-documentation">
+                        <p>Last intervention type</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PerforationDepth</td>
+                    <td class="parameter-documentation">
+                        <p>Perforation depth</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PressureData</td>
+                    <td class="parameter-documentation">
+                        <p>Pressure data</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Pvt</td>
+                    <td class="parameter-documentation">
+                        <p>Pvt</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ReservoirData</td>
+                    <td class="parameter-documentation">
+                        <p>Reservoir data</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Max length: 8000</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsActive</td>
+                    <td class="parameter-documentation">
+                        <p>Whether this well is active: for monitoring, potential tables, etc.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ListOfSectionOfWellDto</td>
+                    <td class="parameter-documentation">
+                        <p>List of sections of well</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel7ce1.html?modelName=SectionOfWellDto">SectionOfWellDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: 1,
+  &quot;WellGroupId&quot;: 2,
+  &quot;SketchDesc&quot;: &quot;sample string 3&quot;,
+  &quot;WellType&quot;: &quot;sample string 4&quot;,
+  &quot;FlowType&quot;: &quot;sample string 5&quot;,
+  &quot;Comment&quot;: &quot;sample string 6&quot;,
+  &quot;Name&quot;: &quot;sample string 7&quot;,
+  &quot;Description&quot;: &quot;sample string 8&quot;,
+  &quot;ProductionHistory&quot;: &quot;sample string 9&quot;,
+  &quot;CompletionType&quot;: &quot;sample string 10&quot;,
+  &quot;DrillingDate&quot;: 1,
+  &quot;FormationCompleteState&quot;: &quot;sample string 11&quot;,
+  &quot;IntegrityStatus&quot;: &quot;sample string 12&quot;,
+  &quot;LastInterventionDate&quot;: 1,
+  &quot;LastInterventionType&quot;: &quot;sample string 13&quot;,
+  &quot;PerforationDepth&quot;: &quot;sample string 14&quot;,
+  &quot;PressureData&quot;: &quot;sample string 15&quot;,
+  &quot;Pvt&quot;: &quot;sample string 16&quot;,
+  &quot;ReservoirData&quot;: &quot;sample string 17&quot;,
+  &quot;IsActive&quot;: true,
+  &quot;ListOfSectionOfWellDto&quot;: [
+    {
+      &quot;WellId&quot;: 1,
+      &quot;Id&quot;: &quot;ddd7e45d-4119-4e00-86d0-b1abf8b90ad3&quot;,
+      &quot;IsVisible&quot;: true,
+      &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;WellId&quot;: 1,
+      &quot;Id&quot;: &quot;ddd7e45d-4119-4e00-86d0-b1abf8b90ad3&quot;,
+      &quot;IsVisible&quot;: true,
+      &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WellDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Comment&gt;sample string 6&lt;/Comment&gt;
+  &lt;CompletionType&gt;sample string 10&lt;/CompletionType&gt;
+  &lt;Description&gt;sample string 8&lt;/Description&gt;
+  &lt;DrillingDate&gt;1&lt;/DrillingDate&gt;
+  &lt;FlowType&gt;sample string 5&lt;/FlowType&gt;
+  &lt;FormationCompleteState&gt;sample string 11&lt;/FormationCompleteState&gt;
+  &lt;Id&gt;1&lt;/Id&gt;
+  &lt;IntegrityStatus&gt;sample string 12&lt;/IntegrityStatus&gt;
+  &lt;IsActive&gt;true&lt;/IsActive&gt;
+  &lt;LastInterventionDate&gt;1&lt;/LastInterventionDate&gt;
+  &lt;LastInterventionType&gt;sample string 13&lt;/LastInterventionType&gt;
+  &lt;ListOfSectionOfWellDto&gt;
+    &lt;SectionOfWellDto&gt;
+      &lt;Id&gt;ddd7e45d-4119-4e00-86d0-b1abf8b90ad3&lt;/Id&gt;
+      &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+      &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+      &lt;WellId&gt;1&lt;/WellId&gt;
+    &lt;/SectionOfWellDto&gt;
+    &lt;SectionOfWellDto&gt;
+      &lt;Id&gt;ddd7e45d-4119-4e00-86d0-b1abf8b90ad3&lt;/Id&gt;
+      &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+      &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+      &lt;WellId&gt;1&lt;/WellId&gt;
+    &lt;/SectionOfWellDto&gt;
+  &lt;/ListOfSectionOfWellDto&gt;
+  &lt;Name&gt;sample string 7&lt;/Name&gt;
+  &lt;PerforationDepth&gt;sample string 14&lt;/PerforationDepth&gt;
+  &lt;PressureData&gt;sample string 15&lt;/PressureData&gt;
+  &lt;ProductionHistory&gt;sample string 9&lt;/ProductionHistory&gt;
+  &lt;Pvt&gt;sample string 16&lt;/Pvt&gt;
+  &lt;ReservoirData&gt;sample string 17&lt;/ReservoirData&gt;
+  &lt;SketchDesc&gt;sample string 3&lt;/SketchDesc&gt;
+  &lt;WellGroupId&gt;2&lt;/WellGroupId&gt;
+  &lt;WellType&gt;sample string 4&lt;/WellType&gt;
+&lt;/WellDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WellDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Changed well</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"fc40984a0e1b41a2bd2b0a99d3e36b33"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-Well_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:40 GMT -->
+</html>

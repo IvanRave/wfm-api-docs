@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/ResourceModel?modelName=WellHistoryDto by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    
+</head>
+<body>
+    <link type="text/css" href="../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <h1>WellHistoryDto</h1>
+    <p>Well history data transfer object</p>
+    <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Well history id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HistoryText</td>
+                    <td class="parameter-documentation">
+                        <p>Well history text</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">StartUnixTime</td>
+                    <td class="parameter-documentation">
+                        <p>Well history start UTC unix time, seconds</p>
+                    </td>
+                    <td class="parameter-type">
+                        unsigned integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EndUnixTime</td>
+                    <td class="parameter-documentation">
+                        <p>End UTC unix time, seconds</p>
+                    </td>
+                    <td class="parameter-type">
+                        unsigned integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellId</td>
+                    <td class="parameter-documentation">
+                        <p>Well id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">JobTypeId</td>
+                    <td class="parameter-documentation">
+                        <p>Job type id: user may choose job type while create well history</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">JobTypeDto</td>
+                    <td class="parameter-documentation">
+                        <p>Job type: user may choose job type while create well history</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="ResourceModel463e.html?modelName=JobTypeDto">JobTypeDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WfmImagesDto</td>
+                    <td class="parameter-documentation">
+                        <p>List of well file manager images</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="ResourceModel47fe.html?modelName=WfmImageDto">WfmImageDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellHistoryFiles</td>
+                    <td class="parameter-documentation">
+                        <p>List of well history files</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="ResourceModel3bf8.html?modelName=FileSpecOfHistoryOfWellDto">FileSpecOfHistoryOfWellDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"9af5fadb979540cd9d230657fbc0980a"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/ResourceModel?modelName=WellHistoryDto by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:43 GMT -->
+</html>

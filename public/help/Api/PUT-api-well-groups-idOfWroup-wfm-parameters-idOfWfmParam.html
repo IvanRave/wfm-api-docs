@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-well-groups-idOfWroup-wfm-parameters-idOfWfmParam by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/well-groups/{idOfWroup}/wfm-parameters/{idOfWfmParam}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/well-groups/{idOfWroup}/wfm-parameters/{idOfWfmParam}</h1>
+<div>
+    <p>Put a wfm parameter of a well group</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">idOfWroup</td>
+                    <td class="parameter-documentation">
+                        <p>Id of a well group</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">idOfWfmParam</td>
+                    <td class="parameter-documentation">
+                        <p>Id of a WFM parameter</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>A data transfer object of the model</p>
+
+<a href="../ResourceModeld9b7.html?modelName=WfmParameterOfWroupDto">WfmParameterOfWroupDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Color</td>
+                    <td class="parameter-documentation">
+                        <p>Parameter color in HEX format: &#39;#FF123456&#39;
+            override of wfm-parameter color</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SerialNumber</td>
+                    <td class="parameter-documentation">
+                        <p>Parameter serial number (order number) in group: for sorting</p>
+                    </td>
+                    <td class="parameter-type">
+                        byte
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellGroupId</td>
+                    <td class="parameter-documentation">
+                        <p>Well group id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WfmParameterId</td>
+                    <td class="parameter-documentation">
+                        <p>Wfm</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsMonitored</td>
+                    <td class="parameter-documentation">
+                        <p>Whether this parameter is monitored (Well, wroup monitoring section)</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Uom</td>
+                    <td class="parameter-documentation">
+                        <p>Unit of measurement, override of wfm-parameter uom</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WfmParameterDto</td>
+                    <td class="parameter-documentation">
+                        <p>Wfm parameter</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModele931.html?modelName=WfmParameterDto">WfmParameterDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Color&quot;: &quot;sample string 1&quot;,
+  &quot;SerialNumber&quot;: 64,
+  &quot;WellGroupId&quot;: 3,
+  &quot;WfmParameterId&quot;: &quot;sample string 4&quot;,
+  &quot;IsMonitored&quot;: true,
+  &quot;Uom&quot;: &quot;sample string 6&quot;,
+  &quot;WfmParameterDto&quot;: {
+    &quot;Id&quot;: &quot;sample string 1&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Uom&quot;: &quot;sample string 3&quot;,
+    &quot;DefaultColor&quot;: &quot;sample string 4&quot;,
+    &quot;IsCumulative&quot;: true,
+    &quot;IsSystem&quot;: true,
+    &quot;WfmParamSquadId&quot;: &quot;sample string 7&quot;
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WfmParameterOfWroupDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Color&gt;sample string 1&lt;/Color&gt;
+  &lt;IsMonitored&gt;true&lt;/IsMonitored&gt;
+  &lt;SerialNumber&gt;64&lt;/SerialNumber&gt;
+  &lt;Uom&gt;sample string 6&lt;/Uom&gt;
+  &lt;WellGroupId&gt;3&lt;/WellGroupId&gt;
+  &lt;WfmParameterDto&gt;
+    &lt;DefaultColor&gt;sample string 4&lt;/DefaultColor&gt;
+    &lt;Id&gt;sample string 1&lt;/Id&gt;
+    &lt;IsCumulative&gt;true&lt;/IsCumulative&gt;
+    &lt;IsSystem&gt;true&lt;/IsSystem&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Uom&gt;sample string 3&lt;/Uom&gt;
+    &lt;WfmParamSquadId&gt;sample string 7&lt;/WfmParamSquadId&gt;
+  &lt;/WfmParameterDto&gt;
+  &lt;WfmParameterId&gt;sample string 4&lt;/WfmParameterId&gt;
+&lt;/WfmParameterOfWroupDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WfmParameterOfWroupDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>A data transfer object of the model</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"272495019ab64354b84c547307dd1461"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-well-groups-idOfWroup-wfm-parameters-idOfWfmParam by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:37 GMT -->
+</html>

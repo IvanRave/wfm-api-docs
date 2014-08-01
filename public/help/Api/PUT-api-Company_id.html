@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-Company_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/Company?id={id}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/Company?id={id}</h1>
+<div>
+    <p>Change company info</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">id</td>
+                    <td class="parameter-documentation">
+                        <p>Company id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Company data transfer object</p>
+
+<a href="../ResourceModel2bdd.html?modelName=CompanyDto">CompanyDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Company Id (GUID)</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Company name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Company description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ListOfSectionOfCompanyDto</td>
+                    <td class="parameter-documentation">
+                        <p>List of sections</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel12cf.html?modelName=SectionOfCompanyDto">SectionOfCompanyDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfFileSpecOfLogo</td>
+                    <td class="parameter-documentation">
+                        <p>Id of file of company logo: can be null - if no logo</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileSpecOfLogo</td>
+                    <td class="parameter-documentation">
+                        <p>Logo file with file url varchar(2083): created from IdOfFileSpecOfLogo</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModela26d.html?modelName=FileSpecDto">FileSpecDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: &quot;d68dc1cb-0283-49bb-8fe7-11dc0d9afa19&quot;,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;Description&quot;: &quot;sample string 3&quot;,
+  &quot;ListOfSectionOfCompanyDto&quot;: [
+    {
+      &quot;CompanyId&quot;: &quot;517cb898-8762-47ad-8a6c-bb938b2f2ee4&quot;,
+      &quot;Id&quot;: &quot;42340f3b-b794-44c4-bf19-827120664a11&quot;,
+      &quot;IsVisible&quot;: true,
+      &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;CompanyId&quot;: &quot;517cb898-8762-47ad-8a6c-bb938b2f2ee4&quot;,
+      &quot;Id&quot;: &quot;42340f3b-b794-44c4-bf19-827120664a11&quot;,
+      &quot;IsVisible&quot;: true,
+      &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+    }
+  ],
+  &quot;IdOfFileSpecOfLogo&quot;: &quot;337446b5-9e22-496b-b707-94466f87c3fd&quot;,
+  &quot;FileSpecOfLogo&quot;: {
+    &quot;Id&quot;: &quot;7e524af4-929c-4660-b848-08dd96e11b7b&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Extension&quot;: &quot;sample string 3&quot;,
+    &quot;ContentType&quot;: &quot;sample string 4&quot;,
+    &quot;Length&quot;: 5,
+    &quot;ContainerName&quot;: &quot;e0e4a969-4450-464a-aa6e-54ca52318758&quot;,
+    &quot;CreatedUnixTime&quot;: 7,
+    &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+    &quot;ImgWidth&quot;: 1,
+    &quot;ImgHeight&quot;: 1
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CompanyDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Description&gt;sample string 3&lt;/Description&gt;
+  &lt;FileSpecOfLogo&gt;
+    &lt;ContainerName&gt;e0e4a969-4450-464a-aa6e-54ca52318758&lt;/ContainerName&gt;
+    &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+    &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+    &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+    &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+    &lt;Id&gt;7e524af4-929c-4660-b848-08dd96e11b7b&lt;/Id&gt;
+    &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+    &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+    &lt;Length&gt;5&lt;/Length&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/FileSpecOfLogo&gt;
+  &lt;Id&gt;d68dc1cb-0283-49bb-8fe7-11dc0d9afa19&lt;/Id&gt;
+  &lt;IdOfFileSpecOfLogo&gt;337446b5-9e22-496b-b707-94466f87c3fd&lt;/IdOfFileSpecOfLogo&gt;
+  &lt;ListOfSectionOfCompanyDto&gt;
+    &lt;SectionOfCompanyDto&gt;
+      &lt;Id&gt;42340f3b-b794-44c4-bf19-827120664a11&lt;/Id&gt;
+      &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+      &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+      &lt;CompanyId&gt;517cb898-8762-47ad-8a6c-bb938b2f2ee4&lt;/CompanyId&gt;
+    &lt;/SectionOfCompanyDto&gt;
+    &lt;SectionOfCompanyDto&gt;
+      &lt;Id&gt;42340f3b-b794-44c4-bf19-827120664a11&lt;/Id&gt;
+      &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+      &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+      &lt;CompanyId&gt;517cb898-8762-47ad-8a6c-bb938b2f2ee4&lt;/CompanyId&gt;
+    &lt;/SectionOfCompanyDto&gt;
+  &lt;/ListOfSectionOfCompanyDto&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+&lt;/CompanyDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;CompanyDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created company</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"bc3b323bb03c4faeb03c071f146daac1"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-Company_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:41 GMT -->
+</html>

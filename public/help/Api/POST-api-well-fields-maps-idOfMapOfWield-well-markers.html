@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-well-fields-maps-idOfMapOfWield-well-markers by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/well-fields/maps/{idOfMapOfWield}/well-markers</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/well-fields/maps/{idOfMapOfWield}/well-markers</h1>
+<div>
+    <p>Post well in well field map</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">idOfMapOfWield</td>
+                    <td class="parameter-documentation">
+                        <p>Id of map</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Well in well field map</p>
+
+<a href="../ResourceModel8190.html?modelName=WellMarkerOfMapOfWieldDto">WellMarkerOfMapOfWieldDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CoordX</td>
+                    <td class="parameter-documentation">
+                        <p>X coord: pixels from left of the map (longitude)</p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                                <p>Matching regular expression pattern: ^\d{1,8}.\d{0,1}$</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CoordY</td>
+                    <td class="parameter-documentation">
+                        <p>Y coord: pixels from top of the map (latitude)</p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                                <p>Matching regular expression pattern: ^\d{1,8}.\d{0,1}$</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfMapOfWield</td>
+                    <td class="parameter-documentation">
+                        <p>Map id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Well id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsDrilled</td>
+                    <td class="parameter-documentation">
+                        <p>Whether this well is drilled on this map (active or not)</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;CoordX&quot;: 1.0,
+  &quot;CoordY&quot;: 2.0,
+  &quot;IdOfMapOfWield&quot;: 3,
+  &quot;IdOfWell&quot;: 4,
+  &quot;IsDrilled&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WellMarkerOfMapOfWieldDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;CoordX&gt;1&lt;/CoordX&gt;
+  &lt;CoordY&gt;2&lt;/CoordY&gt;
+  &lt;IdOfMapOfWield&gt;3&lt;/IdOfMapOfWield&gt;
+  &lt;IdOfWell&gt;4&lt;/IdOfWell&gt;
+  &lt;IsDrilled&gt;true&lt;/IsDrilled&gt;
+&lt;/WellMarkerOfMapOfWieldDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WellMarkerOfMapOfWieldDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created well in well field map</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"75dd740f32264421a22c28a5e84b7169"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-well-fields-maps-idOfMapOfWield-well-markers by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:29 GMT -->
+</html>

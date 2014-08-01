@@ -1,0 +1,1219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>WFM API</title>
+</head>
+<body>
+    
+
+<link type="text/css" href="../css/help-page.css" rel="stylesheet" />
+<header class="help-page">
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1>Other API methods</h1>
+        </div>
+    </div>
+</header>
+<div id="body" class="help-page">
+<section class="content-wrapper main-content clear-fix">
+
+<h2 id="ScopeOfMonitoringRecord">ScopeOfMonitoringRecord</h2>
+    <p>Controller: scope of monitoring data</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-groups-idOfWroup-wells-all-monitoring-records-unixTime.html">GET api/well-groups/{idOfWroup}/wells/all/monitoring-records/{unixTime}</a></td>
+            <td class="api-documentation">
+                <p>Get list of monitoring data for the well group</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="SvgElemOfLogOfWell">SvgElemOfLogOfWell</h2>
+    <p>Controller: svg elements of log of well</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-logs-idOfLogOfWell-svg-elements-idOfSvgElem.html">GET api/well-logs/{idOfLogOfWell}/svg-elements/{idOfSvgElem}</a></td>
+            <td class="api-documentation">
+                <p>Get image svg element (figure)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-well-logs-idOfLogOfWell-svg-elements.html">POST api/well-logs/{idOfLogOfWell}/svg-elements</a></td>
+            <td class="api-documentation">
+                <p>Post new svg elem to log</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-well-logs-idOfLogOfWell-svg-elements-idOfSvgElem.html">DELETE api/well-logs/{idOfLogOfWell}/svg-elements/{idOfSvgElem}</a></td>
+            <td class="api-documentation">
+                <p>Delete image figure</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="ForecastEvolution">ForecastEvolution</h2>
+    <p>Forecast evolution parameters</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-forecastevolution_well_id.html">GET api/forecastevolution?well_id={well_id}</a></td>
+            <td class="api-documentation">
+                <p>Get forecast evolution dictionary</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-forecastevolution.html">POST api/forecastevolution</a></td>
+            <td class="api-documentation">
+                <p>Post new or change an evolution parameter dictionary</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WellMarkerOfMapOfWield">WellMarkerOfMapOfWield</h2>
+    <p>Controller: well in maps of field</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-fields-maps-idOfMapOfWield-well-markers-idOfWell.html">GET api/well-fields/maps/{idOfMapOfWield}/well-markers/{idOfWell}</a></td>
+            <td class="api-documentation">
+                <p>Get well of map of well field</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-well-fields-maps-idOfMapOfWield-well-markers.html">POST api/well-fields/maps/{idOfMapOfWield}/well-markers</a></td>
+            <td class="api-documentation">
+                <p>Post well in well field map</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-well-fields-maps-idOfMapOfWield-well-markers-idOfWell.html">PUT api/well-fields/maps/{idOfMapOfWield}/well-markers/{idOfWell}</a></td>
+            <td class="api-documentation">
+                <p>Put well in well field map: change only coordinates and status</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-well-fields-maps-idOfMapOfWield-well-markers-idOfWell.html">DELETE api/well-fields/maps/{idOfMapOfWield}/well-markers/{idOfWell}</a></td>
+            <td class="api-documentation">
+                <p>Delete well in well field map</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WfmParamSquad">WfmParamSquad</h2>
+    <p>Well file manager parameter group controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wfm-param-squads.html">GET api/wfm-param-squads</a></td>
+            <td class="api-documentation">
+                <p>Get well file manager parameter groups</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wfm-param-squads-inclusive.html">GET api/wfm-param-squads/inclusive</a></td>
+            <td class="api-documentation">
+                <p>Get groups with parameters</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="ScopeOfProcentBorder">ScopeOfProcentBorder</h2>
+    <p>Procent borders for all wells in this well group</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-groups-idOfWroup-wells-all-procent-borders.html">GET api/well-groups/{idOfWroup}/wells/all/procent-borders</a></td>
+            <td class="api-documentation">
+                <p>Get procent borders for all wells in the well group</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WfmParameter">WfmParameter</h2>
+    <p>Well file manager parameter controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wfm-parameters.html">GET api/wfm-parameters</a></td>
+            <td class="api-documentation">
+                <p>Get well file manager parameters filtered by is in library</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wfmparameter.html">GET api/wfmparameter</a></td>
+            <td class="api-documentation">
+                <p>Get well file manager parameters filtered by is in library</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wfmparameter_id.html">GET api/wfmparameter?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Get wfm parameter by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wfm-parameters_id.html">GET api/wfm-parameters?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Get wfm parameter by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wfm-parameters.html">POST api/wfm-parameters</a></td>
+            <td class="api-documentation">
+                <p>Create new parameter</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-wfm-parameters-id.html">PUT api/wfm-parameters/{id}</a></td>
+            <td class="api-documentation">
+                <p>Save changes</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wfm-parameters-id.html">DELETE api/wfm-parameters/{id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well file manager parameter</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WfmImageOfHistoryOfWell">WfmImageOfHistoryOfWell</h2>
+    <p>Well file manager image controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-histories-idOfHistoryOfWell-history-images-id.html">GET api/well-histories/{idOfHistoryOfWell}/history-images/{id}</a></td>
+            <td class="api-documentation">
+                <p>Get history image by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-well-histories-idOfHistoryOfWell-history-images.html">POST api/well-histories/{idOfHistoryOfWell}/history-images</a></td>
+            <td class="api-documentation">
+                <p>Post wfm image</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-well-histories-idOfHistoryOfWell-history-images-id.html">DELETE api/well-histories/{idOfHistoryOfWell}/history-images/{id}</a></td>
+            <td class="api-documentation">
+                <p>Delete wfm image</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="IntegrityOfWell">IntegrityOfWell</h2>
+    <p>Controller for integrity</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-integrities-idOfFileSpec.html">GET api/wells/{idOfWell}/integrities/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Get one</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-integrities.html">GET api/wells/{idOfWell}/integrities</a></td>
+            <td class="api-documentation">
+                <p>Get list</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wells-idOfWell-integrities.html">POST api/wells/{idOfWell}/integrities</a></td>
+            <td class="api-documentation">
+                <p>Post model</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-wells-idOfWell-integrities-idOfFileSpec.html">PUT api/wells/{idOfWell}/integrities/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Put DTO model</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-integrities-idOfFileSpec.html">DELETE api/wells/{idOfWell}/integrities/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Delete model</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="SketchOfWell">SketchOfWell</h2>
+    <p>Controller for sketch of well</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-sketches.html">GET api/wells/{idOfWell}/sketches</a></td>
+            <td class="api-documentation">
+                <p>Get sketches of well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-wells-idOfWell-sketches.html">PUT api/wells/{idOfWell}/sketches</a></td>
+            <td class="api-documentation">
+                <p>Save sketch (create if not exists)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-sketches.html">DELETE api/wells/{idOfWell}/sketches</a></td>
+            <td class="api-documentation">
+                <p>Delete sketch from well</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Widgout">Widgout</h2>
+    <p>Widget layout (widgout) controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-stageId-widget-layouts.html">GET api/{stagePlural}/{stageId}/widget-layouts</a></td>
+            <td class="api-documentation">
+                <p>Get all widget layouts for stage</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-stageId-widget-layouts-id.html">GET api/{stagePlural}/{stageId}/widget-layouts/{id}</a></td>
+            <td class="api-documentation">
+                <p>Get well widgout by id
+            GET: api/well/{wellId:int}/widgout/{id:guid}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-stagePlural-stageId-widget-layouts.html">POST api/{stagePlural}/{stageId}/widget-layouts</a></td>
+            <td class="api-documentation">
+                <p>Create new widget layout</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-stagePlural-stageId-widget-layouts-id.html">PUT api/{stagePlural}/{stageId}/widget-layouts/{id}</a></td>
+            <td class="api-documentation">
+                <p>Save changed widget layout: only layout name</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-stagePlural-stageId-widget-layouts-id.html">DELETE api/{stagePlural}/{stageId}/widget-layouts/{id}</a></td>
+            <td class="api-documentation">
+                <p>Delete widget layout</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="MapOfWield">MapOfWield</h2>
+    <p>Well field map controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-fields-wieldId-maps-id.html">GET api/well-fields/{wieldId}/maps/{id}</a></td>
+            <td class="api-documentation">
+                <p>Get map of field by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-fields-wieldId-maps.html">GET api/well-fields/{wieldId}/maps</a></td>
+            <td class="api-documentation">
+                <p>Get all field maps from well field
+            GET api/well-fields/{wieldId:int}/maps</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-well-fields-wieldId-maps-id.html">PUT api/well-fields/{wieldId}/maps/{id}</a></td>
+            <td class="api-documentation">
+                <p>Put well field map
+            PUT: api/well-fields/{wieldId:int}/maps/{id:int}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-well-fields-wieldId-maps-id.html">DELETE api/well-fields/{wieldId}/maps/{id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well field map
+            DELETE: api/well-fields/{wieldId:int}/maps/{id:int}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-well-fields-wieldId-maps.html">POST api/well-fields/{wieldId}/maps</a></td>
+            <td class="api-documentation">
+                <p>Upload well field map file
+            POST api/well-fields/{wieldId:int}/maps</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-fields-wieldId-maps-id_x1_y1_x2_y2.html">GET api/well-fields/{wieldId}/maps/{id}?x1={x1}&amp;y1={y1}&amp;x2={x2}&amp;y2={y2}</a></td>
+            <td class="api-documentation">
+                <p>Get map image</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="CompanyJobType">CompanyJobType</h2>
+    <p>Job type api controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-companies-companyId-job-types.html">GET api/companies/{companyId}/job-types</a></td>
+            <td class="api-documentation">
+                <p>Get global job types and job types for this company</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-companies-companyId-job-types-jobTypeId.html">GET api/companies/{companyId}/job-types/{jobTypeId}</a></td>
+            <td class="api-documentation">
+                <p>Get company job type by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-companies-companyId-job-types.html">POST api/companies/{companyId}/job-types</a></td>
+            <td class="api-documentation">
+                <p>Post company job type
+            POST: api/companies/{companyId:guid}/job-types</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="MonitoringRecord">MonitoringRecord</h2>
+    <p>Controller for manage monitoring records of well</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-monitoring-records-time-start-startUnixTime-time-end-endUnixTime.html">GET api/wells/{idOfWell}/monitoring-records/time-start/{startUnixTime}/time-end/{endUnixTime}</a></td>
+            <td class="api-documentation">
+                <p>Get monitoring data by time range</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wells-idOfWell-monitoring-records-unixTime.html">POST api/wells/{idOfWell}/monitoring-records/{unixTime}</a></td>
+            <td class="api-documentation">
+                <p>Create or update a monitoring data record</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-monitoring-records-unixTime.html">DELETE api/wells/{idOfWell}/monitoring-records/{unixTime}</a></td>
+            <td class="api-documentation">
+                <p>Remove entity</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-monitoring-records.html">DELETE api/wells/{idOfWell}/monitoring-records</a></td>
+            <td class="api-documentation">
+                <p>Remove all entities from well</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="SectionPattern">SectionPattern</h2>
+    <p>Job type api controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-section-patterns.html">GET api/section-patterns</a></td>
+            <td class="api-documentation">
+                <p>Get list of section patterns</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Widgock">Widgock</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-widgouts-widgoutId-widgocks-id_guid_id.html">GET api/widgouts/{widgoutId}/widgocks/id:guid?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Get widget block by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-widgouts-widgoutId-widgocks.html">POST api/widgouts/{widgoutId}/widgocks</a></td>
+            <td class="api-documentation">
+                <p>Create new widget block</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="ProcentBorder">ProcentBorder</h2>
+    <p>Controller: procent border</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-procent-borders.html">GET api/wells/{idOfWell}/procent-borders</a></td>
+            <td class="api-documentation">
+                <p>Get procent borders for well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wells-idOfWell-procent-borders.html">POST api/wells/{idOfWell}/procent-borders</a></td>
+            <td class="api-documentation">
+                <p>Create (or modify only the procent value) procent border</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-procent-borders-idOfWfmParameter.html">DELETE api/wells/{idOfWell}/procent-borders/{idOfWfmParameter}</a></td>
+            <td class="api-documentation">
+                <p>Delete this procent border</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="ProductionData">ProductionData</h2>
+    <p>Production data controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-productiondata_well_id.html">GET api/productiondata?well_id={well_id}</a></td>
+            <td class="api-documentation">
+                <p>Get well production data list</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-productiondata_well_id.html">DELETE api/productiondata?well_id={well_id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well production data</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="CompanyUser">CompanyUser</h2>
+    <p>Company user controller: HTTP methods for company users</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-companyuser.html">GET api/companyuser</a></td>
+            <td class="api-documentation">
+                <p>Get all companies for current user ang user access level for every company</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-companyuser_company_id.html">GET api/companyuser?company_id={company_id}</a></td>
+            <td class="api-documentation">
+                <p>Get company users</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="VolumeOfWell">VolumeOfWell</h2>
+    <p>Controller for volume of well</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-volumes-idOfFileSpec.html">GET api/wells/{idOfWell}/volumes/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Get volume of well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-volumes.html">GET api/wells/{idOfWell}/volumes</a></td>
+            <td class="api-documentation">
+                <p>Get volumes of well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wells-idOfWell-volumes.html">POST api/wells/{idOfWell}/volumes</a></td>
+            <td class="api-documentation">
+                <p>Post volume of well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-wells-idOfWell-volumes-idOfFileSpec.html">PUT api/wells/{idOfWell}/volumes/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Put volume of well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-volumes-idOfFileSpec.html">DELETE api/wells/{idOfWell}/volumes/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Delete volume</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="NodalAnalysisOfWell">NodalAnalysisOfWell</h2>
+    <p>Controller for nodal analyzes</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-nodal-analyzes-idOfFileSpec.html">GET api/wells/{idOfWell}/nodal-analyzes/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Get nodal analysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-nodal-analyzes.html">GET api/wells/{idOfWell}/nodal-analyzes</a></td>
+            <td class="api-documentation">
+                <p>Get nodal analyzes</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wells-idOfWell-nodal-analyzes.html">POST api/wells/{idOfWell}/nodal-analyzes</a></td>
+            <td class="api-documentation">
+                <p>Post nodal analysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-wells-idOfWell-nodal-analyzes-idOfFileSpec.html">PUT api/wells/{idOfWell}/nodal-analyzes/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Put nodal analysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-wells-idOfWell-nodal-analyzes-idOfFileSpec.html">DELETE api/wells/{idOfWell}/nodal-analyzes/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Delete nodal analysis</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="FileSpecOfHistoryOfWell">FileSpecOfHistoryOfWell</h2>
+    <p>Well history file controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-histories-idOfHistoryOfWell-history-files-idOfFileSpec.html">GET api/well-histories/{idOfHistoryOfWell}/history-files/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Get file of well history</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-well-histories-idOfHistoryOfWell-history-files.html">POST api/well-histories/{idOfHistoryOfWell}/history-files</a></td>
+            <td class="api-documentation">
+                <p>Post well history file</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-well-histories-idOfHistoryOfWell-history-files-idOfFileSpec.html">DELETE api/well-histories/{idOfHistoryOfWell}/history-files/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Delete well history file</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Widget">Widget</h2>
+    <p>Manage widgets</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-widget-blocks-idOfWidgock-widgets-id.html">GET api/{stagePlural}/widget-blocks/{idOfWidgock}/widgets/{id}</a></td>
+            <td class="api-documentation">
+                <p>Get widget by id</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-stagePlural-widget-blocks-idOfWidgock-widgets.html">POST api/{stagePlural}/widget-blocks/{idOfWidgock}/widgets</a></td>
+            <td class="api-documentation">
+                <p>Create new widget</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-stagePlural-widget-blocks-idOfWidgock-widgets-id.html">PUT api/{stagePlural}/widget-blocks/{idOfWidgock}/widgets/{id}</a></td>
+            <td class="api-documentation">
+                <p>Save changed widget</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-stagePlural-widget-blocks-idOfWidgock-widgets-id.html">DELETE api/{stagePlural}/widget-blocks/{idOfWidgock}/widgets/{id}</a></td>
+            <td class="api-documentation">
+                <p>Delete widget</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WfmParameterOfWroup">WfmParameterOfWroup</h2>
+    <p>Well group wfm parameter</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-groups-idOfWroup-wfm-parameters.html">GET api/well-groups/{idOfWroup}/wfm-parameters</a></td>
+            <td class="api-documentation">
+                <p>Get well group wfm parameters</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-well-groups-idOfWroup-wfm-parameters-idOfWfmParam.html">GET api/well-groups/{idOfWroup}/wfm-parameters/{idOfWfmParam}</a></td>
+            <td class="api-documentation">
+                <p>Get a wfm parameter of well group</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-well-groups-idOfWroup-wfm-parameters.html">POST api/well-groups/{idOfWroup}/wfm-parameters</a></td>
+            <td class="api-documentation">
+                <p>Post a wfm parameter of well group</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-well-groups-idOfWroup-wfm-parameters-idOfWfmParam.html">PUT api/well-groups/{idOfWroup}/wfm-parameters/{idOfWfmParam}</a></td>
+            <td class="api-documentation">
+                <p>Put a wfm parameter of a well group</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-well-groups-idOfWroup-wfm-parameters-idOfWfmParam.html">DELETE api/well-groups/{idOfWroup}/wfm-parameters/{idOfWfmParam}</a></td>
+            <td class="api-documentation">
+                <p>Delete well group wfm parameter</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="JobType">JobType</h2>
+    <p>Job type api controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-job-types.html">GET api/job-types</a></td>
+            <td class="api-documentation">
+                <p>Get job types: only global types (without company id)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-job-types-jobTypeId.html">GET api/job-types/{jobTypeId}</a></td>
+            <td class="api-documentation">
+                <p>Get job type: only global types (without company id)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-job-types.html">POST api/job-types</a></td>
+            <td class="api-documentation">
+                <p>Post global job type</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-job-types-id.html">PUT api/job-types/{id}</a></td>
+            <td class="api-documentation">
+                <p>Put job type
+            PUT: api/job-types/{id}
+            Access: admin</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-job-types-id.html">DELETE api/job-types/{id}</a></td>
+            <td class="api-documentation">
+                <p>Delete job type
+            DELETE: api/job-types/{id}
+            Access: admin</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="TestScope">TestScope</h2>
+    <p>Test scope controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-testscope_well_id.html">GET api/testscope?well_id={well_id}</a></td>
+            <td class="api-documentation">
+                <p>Get test scope list</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-testscope.html">POST api/testscope</a></td>
+            <td class="api-documentation">
+                <p>Insert test scope with it&#39;s test data list</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-testscope_id.html">PUT api/testscope?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Replace test scope</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="LogOfWell">LogOfWell</h2>
+    <p>Log of well controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-logs.html">GET api/wells/{idOfWell}/logs</a></td>
+            <td class="api-documentation">
+                <p>Get all logs of well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-wells-idOfWell-logs-id.html">GET api/wells/{idOfWell}/logs/{id}</a></td>
+            <td class="api-documentation">
+                <p>Get log of well (as image, later - as DTO)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-wells-idOfWell-logs-id.html">PUT api/wells/{idOfWell}/logs/{id}</a></td>
+            <td class="api-documentation">
+                <p>Put log: change name, description. FileSpec and Well can&#39;t be changed</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-wells-idOfWell-logs.html">POST api/wells/{idOfWell}/logs</a></td>
+            <td class="api-documentation">
+                <p>Post log of well data transfer object</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="FileSpecOfSection">FileSpecOfSection</h2>
+    <p>All methods with file spec</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec.html">GET api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Download from section</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec_x1_y1_x2_y2.html">GET api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}?x1={x1}&amp;y1={y1}&amp;x2={x2}&amp;y2={y2}</a></td>
+            <td class="api-documentation">
+                <p>Get part of image, cropped by axis</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec-column-attributes.html">GET api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}/column-attributes</a></td>
+            <td class="api-documentation">
+                <p>Get column attributes for log files (.las)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-sections-idOfSection-file-specs.html">GET api/{stagePlural}/sections/{idOfSection}/file-specs</a></td>
+            <td class="api-documentation">
+                <p>Get file spec list from section of well field</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec-perfomance-fragment-indexOfStartRow-countOfRows.html">GET api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}/perfomance-fragment/{indexOfStartRow}/{countOfRows}</a></td>
+            <td class="api-documentation">
+                <p>Get columns fragment from previously uploaded file with production data</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-stagePlural-sections-idOfSection-file-specs.html">POST api/{stagePlural}/sections/{idOfSection}/file-specs</a></td>
+            <td class="api-documentation">
+                <p>Upload file spec (multipart/form-data)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-stagePlural-sections-idOfSection-file-specs-base64.html">POST api/{stagePlural}/sections/{idOfSection}/file-specs/{base64}</a></td>
+            <td class="api-documentation">
+                <p>Upload file spec (base64 string)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec-perfomance-data-indexOfStartRow.html">POST api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}/perfomance-data/{indexOfStartRow}</a></td>
+            <td class="api-documentation">
+                <p>Post well file to production data</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec.html">PUT api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}</a></td>
+            <td class="api-documentation">
+                <p>Put file spec to section: can be changed only name of the file</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-stagePlural-sections-idOfSection-file-specs.html">DELETE api/{stagePlural}/sections/{idOfSection}/file-specs</a></td>
+            <td class="api-documentation">
+                <p>Delete files from section</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Well">Well</h2>
+    <p>Well controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-Well.html">POST api/Well</a></td>
+            <td class="api-documentation">
+                <p>Post well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-Well_id.html">PUT api/Well?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Put well</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-Well_id.html">DELETE api/Well?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WellHistory">WellHistory</h2>
+    <p>Well history controller (only for authorized users with corresponding company access level)</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-WellHistory_well_id.html">GET api/WellHistory?well_id={well_id}</a></td>
+            <td class="api-documentation">
+                <p>Get well history list</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-WellHistory.html">POST api/WellHistory</a></td>
+            <td class="api-documentation">
+                <p>Post well history</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-WellHistory_id.html">PUT api/WellHistory?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Put well history</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-WellHistory_id.html">DELETE api/WellHistory?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well history</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WellField">WellField</h2>
+    <p>Well field controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-WellField.html">POST api/WellField</a></td>
+            <td class="api-documentation">
+                <p>Post well field</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-WellField_id.html">PUT api/WellField?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Put well field</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-WellField_id.html">DELETE api/WellField?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well field</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Company">Company</h2>
+    <p>Company controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-Company.html">GET api/Company</a></td>
+            <td class="api-documentation">
+                <p>Get all companies</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-Company_id.html">GET api/Company?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Get a company</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-Company.html">POST api/Company</a></td>
+            <td class="api-documentation">
+                <p>Post company</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-Company_id.html">PUT api/Company?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Change company info</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-Company_id.html">DELETE api/Company?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete company: only managers can delete</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="TestData">TestData</h2>
+    <p>Test data controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-TestData.html">POST api/TestData</a></td>
+            <td class="api-documentation">
+                <p>Insert test data</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-TestData_testscope_id_hournumber.html">PUT api/TestData?testscope_id={testscope_id}&amp;hournumber={hournumber}</a></td>
+            <td class="api-documentation">
+                <p>Put test data</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-TestData_testscope_id_hournumber.html">DELETE api/TestData?testscope_id={testscope_id}&amp;hournumber={hournumber}</a></td>
+            <td class="api-documentation">
+                <p>Delete test scope line (hour)</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WellFieldMapArea">WellFieldMapArea</h2>
+    <p>Well field map area controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-WellFieldMapArea_wellfieldmap_id.html">GET api/WellFieldMapArea?wellfieldmap_id={wellfieldmap_id}</a></td>
+            <td class="api-documentation">
+                <p>Get all field map areas from well field map</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-WellFieldMapArea.html">POST api/WellFieldMapArea</a></td>
+            <td class="api-documentation">
+                <p>Post well field map area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-WellFieldMapArea_id.html">PUT api/WellFieldMapArea?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Put well field map area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-WellFieldMapArea_id.html">DELETE api/WellFieldMapArea?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well field map area</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="AccessLevel">AccessLevel</h2>
+    <p>Access level controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-AccessLevel.html">GET api/AccessLevel</a></td>
+            <td class="api-documentation">
+                <p>Get access level JSON object: {&#39;Access level name (string)&#39;: { AccessCode: &#39;Access level code (byte)&#39;, Description: &#39;Access level description (string)&#39;}, ... }</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WellRegion">WellRegion</h2>
+    <p>Well region controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-WellRegion_company_id_is_inclusive.html">GET api/WellRegion?company_id={company_id}&amp;is_inclusive={is_inclusive}</a></td>
+            <td class="api-documentation">
+                <p>Get well region list. Only for company users</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/GET-api-WellRegion_id.html">GET api/WellRegion?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Get well region</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-WellRegion.html">POST api/WellRegion</a></td>
+            <td class="api-documentation">
+                <p>Post well region</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-WellRegion_id.html">PUT api/WellRegion?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Put well region</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-WellRegion_id.html">DELETE api/WellRegion?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well region</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="WellGroup">WellGroup</h2>
+    <p>Well group controller</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="Api/POST-api-WellGroup.html">POST api/WellGroup</a></td>
+            <td class="api-documentation">
+                <p>Post well group</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/PUT-api-WellGroup_id.html">PUT api/WellGroup?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Put well group</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="Api/DELETE-api-WellGroup_id.html">DELETE api/WellGroup?id={id}</a></td>
+            <td class="api-documentation">
+                <p>Delete well group</p>
+            </td>
+        </tr>
+    </tbody>
+</table>    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"8098293121c5485ca412121bfb2a3fc7"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/help/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:28 GMT -->
+</html>

@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/GET-api-wfm-param-squads by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>GET api/wfm-param-squads</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET api/wfm-param-squads</h1>
+<div>
+    <p>Get well file manager parameter groups</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Well file manager parameter groups</p>
+
+        Collection of <a href="../ResourceModel054f.html?modelName=WfmParamSquadDto">WfmParamSquadDto</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">WfmParameterDtoList</td>
+                    <td class="parameter-documentation">
+                        <p>Squad param list</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModele931.html?modelName=WfmParameterDto">WfmParameterDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Squad id</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;WfmParameterDtoList&quot;: [
+      {
+        &quot;Id&quot;: &quot;sample string 1&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Uom&quot;: &quot;sample string 3&quot;,
+        &quot;DefaultColor&quot;: &quot;sample string 4&quot;,
+        &quot;IsCumulative&quot;: true,
+        &quot;IsSystem&quot;: true,
+        &quot;WfmParamSquadId&quot;: &quot;sample string 7&quot;
+      },
+      {
+        &quot;Id&quot;: &quot;sample string 1&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Uom&quot;: &quot;sample string 3&quot;,
+        &quot;DefaultColor&quot;: &quot;sample string 4&quot;,
+        &quot;IsCumulative&quot;: true,
+        &quot;IsSystem&quot;: true,
+        &quot;WfmParamSquadId&quot;: &quot;sample string 7&quot;
+      }
+    ],
+    &quot;Id&quot;: &quot;sample string 1&quot;
+  },
+  {
+    &quot;WfmParameterDtoList&quot;: [
+      {
+        &quot;Id&quot;: &quot;sample string 1&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Uom&quot;: &quot;sample string 3&quot;,
+        &quot;DefaultColor&quot;: &quot;sample string 4&quot;,
+        &quot;IsCumulative&quot;: true,
+        &quot;IsSystem&quot;: true,
+        &quot;WfmParamSquadId&quot;: &quot;sample string 7&quot;
+      },
+      {
+        &quot;Id&quot;: &quot;sample string 1&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Uom&quot;: &quot;sample string 3&quot;,
+        &quot;DefaultColor&quot;: &quot;sample string 4&quot;,
+        &quot;IsCumulative&quot;: true,
+        &quot;IsSystem&quot;: true,
+        &quot;WfmParamSquadId&quot;: &quot;sample string 7&quot;
+      }
+    ],
+    &quot;Id&quot;: &quot;sample string 1&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfWfmParamSquadDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;WfmParamSquadDto&gt;
+    &lt;Id&gt;sample string 1&lt;/Id&gt;
+    &lt;WfmParameterDtoList&gt;
+      &lt;WfmParameterDto&gt;
+        &lt;DefaultColor&gt;sample string 4&lt;/DefaultColor&gt;
+        &lt;Id&gt;sample string 1&lt;/Id&gt;
+        &lt;IsCumulative&gt;true&lt;/IsCumulative&gt;
+        &lt;IsSystem&gt;true&lt;/IsSystem&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+        &lt;Uom&gt;sample string 3&lt;/Uom&gt;
+        &lt;WfmParamSquadId&gt;sample string 7&lt;/WfmParamSquadId&gt;
+      &lt;/WfmParameterDto&gt;
+      &lt;WfmParameterDto&gt;
+        &lt;DefaultColor&gt;sample string 4&lt;/DefaultColor&gt;
+        &lt;Id&gt;sample string 1&lt;/Id&gt;
+        &lt;IsCumulative&gt;true&lt;/IsCumulative&gt;
+        &lt;IsSystem&gt;true&lt;/IsSystem&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+        &lt;Uom&gt;sample string 3&lt;/Uom&gt;
+        &lt;WfmParamSquadId&gt;sample string 7&lt;/WfmParamSquadId&gt;
+      &lt;/WfmParameterDto&gt;
+    &lt;/WfmParameterDtoList&gt;
+  &lt;/WfmParamSquadDto&gt;
+  &lt;WfmParamSquadDto&gt;
+    &lt;Id&gt;sample string 1&lt;/Id&gt;
+    &lt;WfmParameterDtoList&gt;
+      &lt;WfmParameterDto&gt;
+        &lt;DefaultColor&gt;sample string 4&lt;/DefaultColor&gt;
+        &lt;Id&gt;sample string 1&lt;/Id&gt;
+        &lt;IsCumulative&gt;true&lt;/IsCumulative&gt;
+        &lt;IsSystem&gt;true&lt;/IsSystem&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+        &lt;Uom&gt;sample string 3&lt;/Uom&gt;
+        &lt;WfmParamSquadId&gt;sample string 7&lt;/WfmParamSquadId&gt;
+      &lt;/WfmParameterDto&gt;
+      &lt;WfmParameterDto&gt;
+        &lt;DefaultColor&gt;sample string 4&lt;/DefaultColor&gt;
+        &lt;Id&gt;sample string 1&lt;/Id&gt;
+        &lt;IsCumulative&gt;true&lt;/IsCumulative&gt;
+        &lt;IsSystem&gt;true&lt;/IsSystem&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+        &lt;Uom&gt;sample string 3&lt;/Uom&gt;
+        &lt;WfmParamSquadId&gt;sample string 7&lt;/WfmParamSquadId&gt;
+      &lt;/WfmParameterDto&gt;
+    &lt;/WfmParameterDtoList&gt;
+  &lt;/WfmParamSquadDto&gt;
+&lt;/ArrayOfWfmParamSquadDto&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"a4a739acde8746828841ad7fbc968566"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/GET-api-wfm-param-squads by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:30 GMT -->
+</html>
