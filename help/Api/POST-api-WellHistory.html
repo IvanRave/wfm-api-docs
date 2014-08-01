@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-WellHistory by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/WellHistory</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/WellHistory</h1>
+<div>
+    <p>Post well history</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Well history</p>
+
+<a href="../ResourceModela4c4.html?modelName=WellHistoryDto">WellHistoryDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Well history id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HistoryText</td>
+                    <td class="parameter-documentation">
+                        <p>Well history text</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">StartUnixTime</td>
+                    <td class="parameter-documentation">
+                        <p>Well history start UTC unix time, seconds</p>
+                    </td>
+                    <td class="parameter-type">
+                        unsigned integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EndUnixTime</td>
+                    <td class="parameter-documentation">
+                        <p>End UTC unix time, seconds</p>
+                    </td>
+                    <td class="parameter-type">
+                        unsigned integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellId</td>
+                    <td class="parameter-documentation">
+                        <p>Well id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">JobTypeId</td>
+                    <td class="parameter-documentation">
+                        <p>Job type id: user may choose job type while create well history</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">JobTypeDto</td>
+                    <td class="parameter-documentation">
+                        <p>Job type: user may choose job type while create well history</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModel463e.html?modelName=JobTypeDto">JobTypeDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WfmImagesDto</td>
+                    <td class="parameter-documentation">
+                        <p>List of well file manager images</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel47fe.html?modelName=WfmImageDto">WfmImageDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellHistoryFiles</td>
+                    <td class="parameter-documentation">
+                        <p>List of well history files</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel3bf8.html?modelName=FileSpecOfHistoryOfWellDto">FileSpecOfHistoryOfWellDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: 1,
+  &quot;HistoryText&quot;: &quot;sample string 2&quot;,
+  &quot;StartUnixTime&quot;: 3,
+  &quot;EndUnixTime&quot;: 4,
+  &quot;WellId&quot;: 5,
+  &quot;JobTypeId&quot;: &quot;5ea63276-d0cd-492b-a4a6-52df591325f4&quot;,
+  &quot;JobTypeDto&quot;: {
+    &quot;Id&quot;: &quot;ef420c37-11ea-450b-9030-b85d6a0e6b99&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Description&quot;: &quot;sample string 3&quot;,
+    &quot;CompanyId&quot;: &quot;6b04cbf4-2e84-4137-91b5-a508a66e1973&quot;
+  },
+  &quot;WfmImagesDto&quot;: [
+    {
+      &quot;Id&quot;: 1,
+      &quot;X1&quot;: 2.1,
+      &quot;X2&quot;: 3.1,
+      &quot;Y1&quot;: 4.1,
+      &quot;Y2&quot;: 5.1,
+      &quot;CropXUnits&quot;: 6.1,
+      &quot;CropYUnits&quot;: 7.1,
+      &quot;IdOfFileSpec&quot;: &quot;78ed6b99-3061-4612-a4e9-a31ad386bcb5&quot;,
+      &quot;FileSpecDto&quot;: {
+        &quot;Id&quot;: &quot;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Extension&quot;: &quot;sample string 3&quot;,
+        &quot;ContentType&quot;: &quot;sample string 4&quot;,
+        &quot;Length&quot;: 5,
+        &quot;ContainerName&quot;: &quot;d0a36c4a-b39a-497f-95c4-3579299dc35b&quot;,
+        &quot;CreatedUnixTime&quot;: 7,
+        &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+        &quot;ImgWidth&quot;: 1,
+        &quot;ImgHeight&quot;: 1
+      },
+      &quot;CroppedImageUrl&quot;: &quot;sample string 9&quot;
+    },
+    {
+      &quot;Id&quot;: 1,
+      &quot;X1&quot;: 2.1,
+      &quot;X2&quot;: 3.1,
+      &quot;Y1&quot;: 4.1,
+      &quot;Y2&quot;: 5.1,
+      &quot;CropXUnits&quot;: 6.1,
+      &quot;CropYUnits&quot;: 7.1,
+      &quot;IdOfFileSpec&quot;: &quot;78ed6b99-3061-4612-a4e9-a31ad386bcb5&quot;,
+      &quot;FileSpecDto&quot;: {
+        &quot;Id&quot;: &quot;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Extension&quot;: &quot;sample string 3&quot;,
+        &quot;ContentType&quot;: &quot;sample string 4&quot;,
+        &quot;Length&quot;: 5,
+        &quot;ContainerName&quot;: &quot;d0a36c4a-b39a-497f-95c4-3579299dc35b&quot;,
+        &quot;CreatedUnixTime&quot;: 7,
+        &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+        &quot;ImgWidth&quot;: 1,
+        &quot;ImgHeight&quot;: 1
+      },
+      &quot;CroppedImageUrl&quot;: &quot;sample string 9&quot;
+    }
+  ],
+  &quot;WellHistoryFiles&quot;: [
+    {
+      &quot;IdOfHistoryOfWell&quot;: 1,
+      &quot;IdOfFileSpec&quot;: &quot;ac87d913-af66-4b5d-8289-5d48ef5e91b0&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;FileSpecDto&quot;: {
+        &quot;Id&quot;: &quot;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Extension&quot;: &quot;sample string 3&quot;,
+        &quot;ContentType&quot;: &quot;sample string 4&quot;,
+        &quot;Length&quot;: 5,
+        &quot;ContainerName&quot;: &quot;d0a36c4a-b39a-497f-95c4-3579299dc35b&quot;,
+        &quot;CreatedUnixTime&quot;: 7,
+        &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+        &quot;ImgWidth&quot;: 1,
+        &quot;ImgHeight&quot;: 1
+      }
+    },
+    {
+      &quot;IdOfHistoryOfWell&quot;: 1,
+      &quot;IdOfFileSpec&quot;: &quot;ac87d913-af66-4b5d-8289-5d48ef5e91b0&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;FileSpecDto&quot;: {
+        &quot;Id&quot;: &quot;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Extension&quot;: &quot;sample string 3&quot;,
+        &quot;ContentType&quot;: &quot;sample string 4&quot;,
+        &quot;Length&quot;: 5,
+        &quot;ContainerName&quot;: &quot;d0a36c4a-b39a-497f-95c4-3579299dc35b&quot;,
+        &quot;CreatedUnixTime&quot;: 7,
+        &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+        &quot;ImgWidth&quot;: 1,
+        &quot;ImgHeight&quot;: 1
+      }
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WellHistoryDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;EndUnixTime&gt;4&lt;/EndUnixTime&gt;
+  &lt;HistoryText&gt;sample string 2&lt;/HistoryText&gt;
+  &lt;Id&gt;1&lt;/Id&gt;
+  &lt;JobTypeDto&gt;
+    &lt;CompanyId&gt;6b04cbf4-2e84-4137-91b5-a508a66e1973&lt;/CompanyId&gt;
+    &lt;Description&gt;sample string 3&lt;/Description&gt;
+    &lt;Id&gt;ef420c37-11ea-450b-9030-b85d6a0e6b99&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/JobTypeDto&gt;
+  &lt;JobTypeId&gt;5ea63276-d0cd-492b-a4a6-52df591325f4&lt;/JobTypeId&gt;
+  &lt;StartUnixTime&gt;3&lt;/StartUnixTime&gt;
+  &lt;WellHistoryFiles&gt;
+    &lt;FileSpecOfHistoryOfWellDto&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;FileSpecDto&gt;
+        &lt;ContainerName&gt;d0a36c4a-b39a-497f-95c4-3579299dc35b&lt;/ContainerName&gt;
+        &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+        &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+        &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+        &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+        &lt;Id&gt;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&lt;/Id&gt;
+        &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+        &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+        &lt;Length&gt;5&lt;/Length&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;/FileSpecDto&gt;
+      &lt;IdOfFileSpec&gt;ac87d913-af66-4b5d-8289-5d48ef5e91b0&lt;/IdOfFileSpec&gt;
+      &lt;IdOfHistoryOfWell&gt;1&lt;/IdOfHistoryOfWell&gt;
+    &lt;/FileSpecOfHistoryOfWellDto&gt;
+    &lt;FileSpecOfHistoryOfWellDto&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;FileSpecDto&gt;
+        &lt;ContainerName&gt;d0a36c4a-b39a-497f-95c4-3579299dc35b&lt;/ContainerName&gt;
+        &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+        &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+        &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+        &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+        &lt;Id&gt;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&lt;/Id&gt;
+        &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+        &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+        &lt;Length&gt;5&lt;/Length&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;/FileSpecDto&gt;
+      &lt;IdOfFileSpec&gt;ac87d913-af66-4b5d-8289-5d48ef5e91b0&lt;/IdOfFileSpec&gt;
+      &lt;IdOfHistoryOfWell&gt;1&lt;/IdOfHistoryOfWell&gt;
+    &lt;/FileSpecOfHistoryOfWellDto&gt;
+  &lt;/WellHistoryFiles&gt;
+  &lt;WellId&gt;5&lt;/WellId&gt;
+  &lt;WfmImagesDto&gt;
+    &lt;WfmImageDto&gt;
+      &lt;CropXUnits&gt;6.1&lt;/CropXUnits&gt;
+      &lt;CropYUnits&gt;7.1&lt;/CropYUnits&gt;
+      &lt;CroppedImageUrl&gt;sample string 9&lt;/CroppedImageUrl&gt;
+      &lt;FileSpecDto&gt;
+        &lt;ContainerName&gt;d0a36c4a-b39a-497f-95c4-3579299dc35b&lt;/ContainerName&gt;
+        &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+        &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+        &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+        &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+        &lt;Id&gt;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&lt;/Id&gt;
+        &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+        &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+        &lt;Length&gt;5&lt;/Length&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;/FileSpecDto&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;IdOfFileSpec&gt;78ed6b99-3061-4612-a4e9-a31ad386bcb5&lt;/IdOfFileSpec&gt;
+      &lt;X1&gt;2.1&lt;/X1&gt;
+      &lt;X2&gt;3.1&lt;/X2&gt;
+      &lt;Y1&gt;4.1&lt;/Y1&gt;
+      &lt;Y2&gt;5.1&lt;/Y2&gt;
+    &lt;/WfmImageDto&gt;
+    &lt;WfmImageDto&gt;
+      &lt;CropXUnits&gt;6.1&lt;/CropXUnits&gt;
+      &lt;CropYUnits&gt;7.1&lt;/CropYUnits&gt;
+      &lt;CroppedImageUrl&gt;sample string 9&lt;/CroppedImageUrl&gt;
+      &lt;FileSpecDto&gt;
+        &lt;ContainerName&gt;d0a36c4a-b39a-497f-95c4-3579299dc35b&lt;/ContainerName&gt;
+        &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+        &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+        &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+        &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+        &lt;Id&gt;cd978d83-d8a3-41a6-b8ce-20a2b04d40cb&lt;/Id&gt;
+        &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+        &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+        &lt;Length&gt;5&lt;/Length&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;/FileSpecDto&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;IdOfFileSpec&gt;78ed6b99-3061-4612-a4e9-a31ad386bcb5&lt;/IdOfFileSpec&gt;
+      &lt;X1&gt;2.1&lt;/X1&gt;
+      &lt;X2&gt;3.1&lt;/X2&gt;
+      &lt;Y1&gt;4.1&lt;/Y1&gt;
+      &lt;Y2&gt;5.1&lt;/Y2&gt;
+    &lt;/WfmImageDto&gt;
+  &lt;/WfmImagesDto&gt;
+&lt;/WellHistoryDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WellHistoryDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created well history</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"78ae4af85112450aa2f28b7f39322298"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-WellHistory by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:40 GMT -->
+</html>

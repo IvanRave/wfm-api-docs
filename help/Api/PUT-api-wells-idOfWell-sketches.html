@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-wells-idOfWell-sketches by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/wells/{idOfWell}/sketches</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/wells/{idOfWell}/sketches</h1>
+<div>
+    <p>Save sketch (create if not exists)</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">idOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Id of well</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Sketch of well DTO model</p>
+
+<a href="../ResourceModel18c4.html?modelName=SketchOfWellDto">SketchOfWellDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Name of sketch: by default - name of file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfFileSpec</td>
+                    <td class="parameter-documentation">
+                        <p>Id of file</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Description of sketch</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Id of well</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileSpecDto</td>
+                    <td class="parameter-documentation">
+                        <p>File spec of this sketch</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModela26d.html?modelName=FileSpecDto">FileSpecDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Name&quot;: &quot;sample string 1&quot;,
+  &quot;IdOfFileSpec&quot;: &quot;1b58846f-136e-4ec3-bd05-24aa19e428c2&quot;,
+  &quot;Description&quot;: &quot;sample string 3&quot;,
+  &quot;IdOfWell&quot;: 4,
+  &quot;FileSpecDto&quot;: {
+    &quot;Id&quot;: &quot;31901c69-c7b6-48d1-9ff1-810588562746&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Extension&quot;: &quot;sample string 3&quot;,
+    &quot;ContentType&quot;: &quot;sample string 4&quot;,
+    &quot;Length&quot;: 5,
+    &quot;ContainerName&quot;: &quot;b875dde9-5e45-4115-9014-820fe1054632&quot;,
+    &quot;CreatedUnixTime&quot;: 7,
+    &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+    &quot;ImgWidth&quot;: 1,
+    &quot;ImgHeight&quot;: 1
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;SketchOfWellDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Description&gt;sample string 3&lt;/Description&gt;
+  &lt;FileSpecDto&gt;
+    &lt;ContainerName&gt;b875dde9-5e45-4115-9014-820fe1054632&lt;/ContainerName&gt;
+    &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+    &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+    &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+    &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+    &lt;Id&gt;31901c69-c7b6-48d1-9ff1-810588562746&lt;/Id&gt;
+    &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+    &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+    &lt;Length&gt;5&lt;/Length&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/FileSpecDto&gt;
+  &lt;IdOfFileSpec&gt;1b58846f-136e-4ec3-bd05-24aa19e428c2&lt;/IdOfFileSpec&gt;
+  &lt;IdOfWell&gt;4&lt;/IdOfWell&gt;
+  &lt;Name&gt;sample string 1&lt;/Name&gt;
+&lt;/SketchOfWellDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;SketchOfWellDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Changed sketch of well DTO model</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"7d6ade7d6a6f48c08c026d36ff5db6e8"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-wells-idOfWell-sketches by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:31 GMT -->
+</html>

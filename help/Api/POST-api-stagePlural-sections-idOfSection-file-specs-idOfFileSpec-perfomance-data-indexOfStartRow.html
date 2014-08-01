@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec-perfomance-data-indexOfStartRow by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}/perfomance-data/{indexOfStartRow}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/{stagePlural}/sections/{idOfSection}/file-specs/{idOfFileSpec}/perfomance-data/{indexOfStartRow}</h1>
+<div>
+    <p>Post well file to production data</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">stagePlural</td>
+                    <td class="parameter-documentation">
+                        <p>Stage in plural mode (only &quot;wells&quot;)</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">idOfSection</td>
+                    <td class="parameter-documentation">
+                        <p>Id of section</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">idOfFileSpec</td>
+                    <td class="parameter-documentation">
+                        <p>Id of file section</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">indexOfStartRow</td>
+                    <td class="parameter-documentation">
+                        <p>Index of the start row</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Column attribute list</p>
+
+        Collection of <a href="../ResourceModel7e40.html?modelName=ColumnAttribute">ColumnAttribute</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Format</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ColumnColor</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">StartValue</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EndValue</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;Id&quot;: 1,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Format&quot;: &quot;sample string 3&quot;,
+    &quot;Description&quot;: &quot;sample string 4&quot;,
+    &quot;ColumnColor&quot;: &quot;sample string 5&quot;,
+    &quot;StartValue&quot;: 1.1,
+    &quot;EndValue&quot;: 1.1
+  },
+  {
+    &quot;Id&quot;: 1,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Format&quot;: &quot;sample string 3&quot;,
+    &quot;Description&quot;: &quot;sample string 4&quot;,
+    &quot;ColumnColor&quot;: &quot;sample string 5&quot;,
+    &quot;StartValue&quot;: 1.1,
+    &quot;EndValue&quot;: 1.1
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfColumnAttribute xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;ColumnAttribute&gt;
+    &lt;ColumnColor&gt;sample string 5&lt;/ColumnColor&gt;
+    &lt;Description&gt;sample string 4&lt;/Description&gt;
+    &lt;EndValue&gt;1.1&lt;/EndValue&gt;
+    &lt;Format&gt;sample string 3&lt;/Format&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;StartValue&gt;1.1&lt;/StartValue&gt;
+  &lt;/ColumnAttribute&gt;
+  &lt;ColumnAttribute&gt;
+    &lt;ColumnColor&gt;sample string 5&lt;/ColumnColor&gt;
+    &lt;Description&gt;sample string 4&lt;/Description&gt;
+    &lt;EndValue&gt;1.1&lt;/EndValue&gt;
+    &lt;Format&gt;sample string 3&lt;/Format&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;StartValue&gt;1.1&lt;/StartValue&gt;
+  &lt;/ColumnAttribute&gt;
+&lt;/ArrayOfColumnAttribute&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;List`1&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Import status</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"9877164e81174ba788942ad3283a326d"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-stagePlural-sections-idOfSection-file-specs-idOfFileSpec-perfomance-data-indexOfStartRow by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:39 GMT -->
+</html>

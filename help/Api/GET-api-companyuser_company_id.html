@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/GET-api-companyuser_company_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>GET api/companyuser?company_id={company_id}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET api/companyuser?company_id={company_id}</h1>
+<div>
+    <p>Get company users</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">company_id</td>
+                    <td class="parameter-documentation">
+                        <p>Company</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of company users</p>
+
+        Collection of <a href="../ResourceModel6d55.html?modelName=CompanyUserDto">CompanyUserDto</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CompanyId</td>
+                    <td class="parameter-documentation">
+                        <p>Company id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UserProfileId</td>
+                    <td class="parameter-documentation">
+                        <p>User profile id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AccessLevel</td>
+                    <td class="parameter-documentation">
+                        <p>Access level: 0 - company owner, 10 - company editor, 20 - company viewer</p>
+                    </td>
+                    <td class="parameter-type">
+                        byte
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CompanyDto</td>
+                    <td class="parameter-documentation">
+                        <p>Company object where user work</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModel2bdd.html?modelName=CompanyDto">CompanyDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UserProfileDto</td>
+                    <td class="parameter-documentation">
+                        <p>User profile data transfer object</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModel2eb5.html?modelName=UserProfileDto">UserProfileDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;CompanyId&quot;: &quot;89be95d5-8de0-40ed-b11b-5961bbd8a57d&quot;,
+    &quot;UserProfileId&quot;: 2,
+    &quot;AccessLevel&quot;: 64,
+    &quot;CompanyDto&quot;: {
+      &quot;Id&quot;: &quot;c776cf8f-ac67-4a75-9fd5-a97fb024a84e&quot;,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;ListOfSectionOfCompanyDto&quot;: [
+        {
+          &quot;CompanyId&quot;: &quot;c2528b8b-d752-493c-8f37-b10ca5083a79&quot;,
+          &quot;Id&quot;: &quot;1fa316f6-0ac7-438b-8784-8b2c10c0464c&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        },
+        {
+          &quot;CompanyId&quot;: &quot;c2528b8b-d752-493c-8f37-b10ca5083a79&quot;,
+          &quot;Id&quot;: &quot;1fa316f6-0ac7-438b-8784-8b2c10c0464c&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        }
+      ],
+      &quot;IdOfFileSpecOfLogo&quot;: &quot;8641870c-1a52-4546-88b8-3f192787d788&quot;,
+      &quot;FileSpecOfLogo&quot;: {
+        &quot;Id&quot;: &quot;0f4291d3-eebb-4551-993a-d2ea36301b46&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Extension&quot;: &quot;sample string 3&quot;,
+        &quot;ContentType&quot;: &quot;sample string 4&quot;,
+        &quot;Length&quot;: 5,
+        &quot;ContainerName&quot;: &quot;1e934e5b-0aaf-4714-8d4a-024e6e6756b5&quot;,
+        &quot;CreatedUnixTime&quot;: 7,
+        &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+        &quot;ImgWidth&quot;: 1,
+        &quot;ImgHeight&quot;: 1
+      }
+    },
+    &quot;UserProfileDto&quot;: {
+      &quot;Id&quot;: 1,
+      &quot;Email&quot;: &quot;sample string 2&quot;,
+      &quot;Roles&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  {
+    &quot;CompanyId&quot;: &quot;89be95d5-8de0-40ed-b11b-5961bbd8a57d&quot;,
+    &quot;UserProfileId&quot;: 2,
+    &quot;AccessLevel&quot;: 64,
+    &quot;CompanyDto&quot;: {
+      &quot;Id&quot;: &quot;c776cf8f-ac67-4a75-9fd5-a97fb024a84e&quot;,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;ListOfSectionOfCompanyDto&quot;: [
+        {
+          &quot;CompanyId&quot;: &quot;c2528b8b-d752-493c-8f37-b10ca5083a79&quot;,
+          &quot;Id&quot;: &quot;1fa316f6-0ac7-438b-8784-8b2c10c0464c&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        },
+        {
+          &quot;CompanyId&quot;: &quot;c2528b8b-d752-493c-8f37-b10ca5083a79&quot;,
+          &quot;Id&quot;: &quot;1fa316f6-0ac7-438b-8784-8b2c10c0464c&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        }
+      ],
+      &quot;IdOfFileSpecOfLogo&quot;: &quot;8641870c-1a52-4546-88b8-3f192787d788&quot;,
+      &quot;FileSpecOfLogo&quot;: {
+        &quot;Id&quot;: &quot;0f4291d3-eebb-4551-993a-d2ea36301b46&quot;,
+        &quot;Name&quot;: &quot;sample string 2&quot;,
+        &quot;Extension&quot;: &quot;sample string 3&quot;,
+        &quot;ContentType&quot;: &quot;sample string 4&quot;,
+        &quot;Length&quot;: 5,
+        &quot;ContainerName&quot;: &quot;1e934e5b-0aaf-4714-8d4a-024e6e6756b5&quot;,
+        &quot;CreatedUnixTime&quot;: 7,
+        &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+        &quot;ImgWidth&quot;: 1,
+        &quot;ImgHeight&quot;: 1
+      }
+    },
+    &quot;UserProfileDto&quot;: {
+      &quot;Id&quot;: 1,
+      &quot;Email&quot;: &quot;sample string 2&quot;,
+      &quot;Roles&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfCompanyUserDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;CompanyUserDto&gt;
+    &lt;AccessLevel&gt;64&lt;/AccessLevel&gt;
+    &lt;CompanyDto&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;FileSpecOfLogo&gt;
+        &lt;ContainerName&gt;1e934e5b-0aaf-4714-8d4a-024e6e6756b5&lt;/ContainerName&gt;
+        &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+        &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+        &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+        &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+        &lt;Id&gt;0f4291d3-eebb-4551-993a-d2ea36301b46&lt;/Id&gt;
+        &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+        &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+        &lt;Length&gt;5&lt;/Length&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;/FileSpecOfLogo&gt;
+      &lt;Id&gt;c776cf8f-ac67-4a75-9fd5-a97fb024a84e&lt;/Id&gt;
+      &lt;IdOfFileSpecOfLogo&gt;8641870c-1a52-4546-88b8-3f192787d788&lt;/IdOfFileSpecOfLogo&gt;
+      &lt;ListOfSectionOfCompanyDto&gt;
+        &lt;SectionOfCompanyDto&gt;
+          &lt;Id&gt;1fa316f6-0ac7-438b-8784-8b2c10c0464c&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;CompanyId&gt;c2528b8b-d752-493c-8f37-b10ca5083a79&lt;/CompanyId&gt;
+        &lt;/SectionOfCompanyDto&gt;
+        &lt;SectionOfCompanyDto&gt;
+          &lt;Id&gt;1fa316f6-0ac7-438b-8784-8b2c10c0464c&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;CompanyId&gt;c2528b8b-d752-493c-8f37-b10ca5083a79&lt;/CompanyId&gt;
+        &lt;/SectionOfCompanyDto&gt;
+      &lt;/ListOfSectionOfCompanyDto&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;/CompanyDto&gt;
+    &lt;CompanyId&gt;89be95d5-8de0-40ed-b11b-5961bbd8a57d&lt;/CompanyId&gt;
+    &lt;UserProfileDto&gt;
+      &lt;Email&gt;sample string 2&lt;/Email&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;Roles xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/Roles&gt;
+    &lt;/UserProfileDto&gt;
+    &lt;UserProfileId&gt;2&lt;/UserProfileId&gt;
+  &lt;/CompanyUserDto&gt;
+  &lt;CompanyUserDto&gt;
+    &lt;AccessLevel&gt;64&lt;/AccessLevel&gt;
+    &lt;CompanyDto&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;FileSpecOfLogo&gt;
+        &lt;ContainerName&gt;1e934e5b-0aaf-4714-8d4a-024e6e6756b5&lt;/ContainerName&gt;
+        &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+        &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+        &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+        &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+        &lt;Id&gt;0f4291d3-eebb-4551-993a-d2ea36301b46&lt;/Id&gt;
+        &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+        &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+        &lt;Length&gt;5&lt;/Length&gt;
+        &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;/FileSpecOfLogo&gt;
+      &lt;Id&gt;c776cf8f-ac67-4a75-9fd5-a97fb024a84e&lt;/Id&gt;
+      &lt;IdOfFileSpecOfLogo&gt;8641870c-1a52-4546-88b8-3f192787d788&lt;/IdOfFileSpecOfLogo&gt;
+      &lt;ListOfSectionOfCompanyDto&gt;
+        &lt;SectionOfCompanyDto&gt;
+          &lt;Id&gt;1fa316f6-0ac7-438b-8784-8b2c10c0464c&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;CompanyId&gt;c2528b8b-d752-493c-8f37-b10ca5083a79&lt;/CompanyId&gt;
+        &lt;/SectionOfCompanyDto&gt;
+        &lt;SectionOfCompanyDto&gt;
+          &lt;Id&gt;1fa316f6-0ac7-438b-8784-8b2c10c0464c&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;CompanyId&gt;c2528b8b-d752-493c-8f37-b10ca5083a79&lt;/CompanyId&gt;
+        &lt;/SectionOfCompanyDto&gt;
+      &lt;/ListOfSectionOfCompanyDto&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;/CompanyDto&gt;
+    &lt;CompanyId&gt;89be95d5-8de0-40ed-b11b-5961bbd8a57d&lt;/CompanyId&gt;
+    &lt;UserProfileDto&gt;
+      &lt;Email&gt;sample string 2&lt;/Email&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;Roles xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/Roles&gt;
+    &lt;/UserProfileDto&gt;
+    &lt;UserProfileId&gt;2&lt;/UserProfileId&gt;
+  &lt;/CompanyUserDto&gt;
+&lt;/ArrayOfCompanyUserDto&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"45e74facec134af292e251b4f2fbef41"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/GET-api-companyuser_company_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:36 GMT -->
+</html>

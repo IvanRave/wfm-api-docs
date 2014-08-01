@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-widgouts-widgoutId-widgocks by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/widgouts/{widgoutId}/widgocks</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/widgouts/{widgoutId}/widgocks</h1>
+<div>
+    <p>Create new widget block</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">widgoutId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Widget block data transfer object</p>
+
+<a href="../ResourceModel09ad.html?modelName=WidgockDto">WidgockDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Widget block id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OrderNumber</td>
+                    <td class="parameter-documentation">
+                        <p>First, second, third block</p>
+                    </td>
+                    <td class="parameter-type">
+                        byte
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ColumnCount</td>
+                    <td class="parameter-documentation">
+                        <p>Places in four column - 6 (of 12)
+            First block - 3, Third block - 3 (3+6+3 = 12)</p>
+                    </td>
+                    <td class="parameter-type">
+                        byte
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WidgoutId</td>
+                    <td class="parameter-documentation">
+                        <p>Widget layout (parent) id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WidgetDtoList</td>
+                    <td class="parameter-documentation">
+                        <p>List of widget for this block</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel36fb.html?modelName=WidgetDto">WidgetDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: &quot;5a46e014-9890-4528-a672-48079d4ffe1e&quot;,
+  &quot;OrderNumber&quot;: 64,
+  &quot;ColumnCount&quot;: 64,
+  &quot;WidgoutId&quot;: &quot;41a11ea4-7d22-4a1a-8212-e9abf0a53ac5&quot;,
+  &quot;WidgetDtoList&quot;: [
+    {
+      &quot;Id&quot;: &quot;0441bf30-0166-4ae9-aea5-fe7d9906a8e8&quot;,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;IdOfSectionPattern&quot;: &quot;sample string 3&quot;,
+      &quot;WidgockId&quot;: &quot;c6d15889-09f8-4869-8eb0-e331a5a06ddb&quot;,
+      &quot;Opts&quot;: &quot;sample string 5&quot;,
+      &quot;OrderNumber&quot;: 64,
+      &quot;IdOfCntxStage&quot;: &quot;sample string 7&quot;
+    },
+    {
+      &quot;Id&quot;: &quot;0441bf30-0166-4ae9-aea5-fe7d9906a8e8&quot;,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;IdOfSectionPattern&quot;: &quot;sample string 3&quot;,
+      &quot;WidgockId&quot;: &quot;c6d15889-09f8-4869-8eb0-e331a5a06ddb&quot;,
+      &quot;Opts&quot;: &quot;sample string 5&quot;,
+      &quot;OrderNumber&quot;: 64,
+      &quot;IdOfCntxStage&quot;: &quot;sample string 7&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WidgockDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;ColumnCount&gt;64&lt;/ColumnCount&gt;
+  &lt;Id&gt;5a46e014-9890-4528-a672-48079d4ffe1e&lt;/Id&gt;
+  &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+  &lt;WidgetDtoList&gt;
+    &lt;WidgetDto&gt;
+      &lt;Id&gt;0441bf30-0166-4ae9-aea5-fe7d9906a8e8&lt;/Id&gt;
+      &lt;IdOfCntxStage&gt;sample string 7&lt;/IdOfCntxStage&gt;
+      &lt;IdOfSectionPattern&gt;sample string 3&lt;/IdOfSectionPattern&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Opts&gt;sample string 5&lt;/Opts&gt;
+      &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+      &lt;WidgockId&gt;c6d15889-09f8-4869-8eb0-e331a5a06ddb&lt;/WidgockId&gt;
+    &lt;/WidgetDto&gt;
+    &lt;WidgetDto&gt;
+      &lt;Id&gt;0441bf30-0166-4ae9-aea5-fe7d9906a8e8&lt;/Id&gt;
+      &lt;IdOfCntxStage&gt;sample string 7&lt;/IdOfCntxStage&gt;
+      &lt;IdOfSectionPattern&gt;sample string 3&lt;/IdOfSectionPattern&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Opts&gt;sample string 5&lt;/Opts&gt;
+      &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+      &lt;WidgockId&gt;c6d15889-09f8-4869-8eb0-e331a5a06ddb&lt;/WidgockId&gt;
+    &lt;/WidgetDto&gt;
+  &lt;/WidgetDtoList&gt;
+  &lt;WidgoutId&gt;41a11ea4-7d22-4a1a-8212-e9abf0a53ac5&lt;/WidgoutId&gt;
+&lt;/WidgockDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WidgockDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created widget block plus location</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"eb0602aea33a43c594c28d5a45072baf"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-widgouts-widgoutId-widgocks by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:35 GMT -->
+</html>

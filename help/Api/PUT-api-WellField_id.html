@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-WellField_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/WellField?id={id}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/WellField?id={id}</h1>
+<div>
+    <p>Put well field</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">id</td>
+                    <td class="parameter-documentation">
+                        <p>Well field id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Well field</p>
+
+<a href="../ResourceModel4c71.html?modelName=WellFieldDto">WellFieldDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Well field id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Well field name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Field description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellRegionId</td>
+                    <td class="parameter-documentation">
+                        <p>Well region id: well field parent</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WellGroupsDto</td>
+                    <td class="parameter-documentation">
+                        <p>Well group dto list</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModelff43.html?modelName=WellGroupDto">WellGroupDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ListOfSectionOfWieldDto</td>
+                    <td class="parameter-documentation">
+                        <p>List of sections of well field: well field has few sections</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModelcbf1.html?modelName=SectionOfWieldDto">SectionOfWieldDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: 1,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;Description&quot;: &quot;sample string 3&quot;,
+  &quot;WellRegionId&quot;: 4,
+  &quot;WellGroupsDto&quot;: [
+    {
+      &quot;Id&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;WellFieldId&quot;: 4,
+      &quot;WellsDto&quot;: [
+        {
+          &quot;Id&quot;: 1,
+          &quot;WellGroupId&quot;: 2,
+          &quot;SketchDesc&quot;: &quot;sample string 3&quot;,
+          &quot;WellType&quot;: &quot;sample string 4&quot;,
+          &quot;FlowType&quot;: &quot;sample string 5&quot;,
+          &quot;Comment&quot;: &quot;sample string 6&quot;,
+          &quot;Name&quot;: &quot;sample string 7&quot;,
+          &quot;Description&quot;: &quot;sample string 8&quot;,
+          &quot;ProductionHistory&quot;: &quot;sample string 9&quot;,
+          &quot;CompletionType&quot;: &quot;sample string 10&quot;,
+          &quot;DrillingDate&quot;: 1,
+          &quot;FormationCompleteState&quot;: &quot;sample string 11&quot;,
+          &quot;IntegrityStatus&quot;: &quot;sample string 12&quot;,
+          &quot;LastInterventionDate&quot;: 1,
+          &quot;LastInterventionType&quot;: &quot;sample string 13&quot;,
+          &quot;PerforationDepth&quot;: &quot;sample string 14&quot;,
+          &quot;PressureData&quot;: &quot;sample string 15&quot;,
+          &quot;Pvt&quot;: &quot;sample string 16&quot;,
+          &quot;ReservoirData&quot;: &quot;sample string 17&quot;,
+          &quot;IsActive&quot;: true,
+          &quot;ListOfSectionOfWellDto&quot;: [
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            },
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            }
+          ]
+        },
+        {
+          &quot;Id&quot;: 1,
+          &quot;WellGroupId&quot;: 2,
+          &quot;SketchDesc&quot;: &quot;sample string 3&quot;,
+          &quot;WellType&quot;: &quot;sample string 4&quot;,
+          &quot;FlowType&quot;: &quot;sample string 5&quot;,
+          &quot;Comment&quot;: &quot;sample string 6&quot;,
+          &quot;Name&quot;: &quot;sample string 7&quot;,
+          &quot;Description&quot;: &quot;sample string 8&quot;,
+          &quot;ProductionHistory&quot;: &quot;sample string 9&quot;,
+          &quot;CompletionType&quot;: &quot;sample string 10&quot;,
+          &quot;DrillingDate&quot;: 1,
+          &quot;FormationCompleteState&quot;: &quot;sample string 11&quot;,
+          &quot;IntegrityStatus&quot;: &quot;sample string 12&quot;,
+          &quot;LastInterventionDate&quot;: 1,
+          &quot;LastInterventionType&quot;: &quot;sample string 13&quot;,
+          &quot;PerforationDepth&quot;: &quot;sample string 14&quot;,
+          &quot;PressureData&quot;: &quot;sample string 15&quot;,
+          &quot;Pvt&quot;: &quot;sample string 16&quot;,
+          &quot;ReservoirData&quot;: &quot;sample string 17&quot;,
+          &quot;IsActive&quot;: true,
+          &quot;ListOfSectionOfWellDto&quot;: [
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            },
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            }
+          ]
+        }
+      ],
+      &quot;ListOfSectionOfWroupDto&quot;: [
+        {
+          &quot;WroupId&quot;: 1,
+          &quot;Id&quot;: &quot;962c5415-45c7-4a39-89bf-868da8756bb9&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        },
+        {
+          &quot;WroupId&quot;: 1,
+          &quot;Id&quot;: &quot;962c5415-45c7-4a39-89bf-868da8756bb9&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        }
+      ]
+    },
+    {
+      &quot;Id&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;WellFieldId&quot;: 4,
+      &quot;WellsDto&quot;: [
+        {
+          &quot;Id&quot;: 1,
+          &quot;WellGroupId&quot;: 2,
+          &quot;SketchDesc&quot;: &quot;sample string 3&quot;,
+          &quot;WellType&quot;: &quot;sample string 4&quot;,
+          &quot;FlowType&quot;: &quot;sample string 5&quot;,
+          &quot;Comment&quot;: &quot;sample string 6&quot;,
+          &quot;Name&quot;: &quot;sample string 7&quot;,
+          &quot;Description&quot;: &quot;sample string 8&quot;,
+          &quot;ProductionHistory&quot;: &quot;sample string 9&quot;,
+          &quot;CompletionType&quot;: &quot;sample string 10&quot;,
+          &quot;DrillingDate&quot;: 1,
+          &quot;FormationCompleteState&quot;: &quot;sample string 11&quot;,
+          &quot;IntegrityStatus&quot;: &quot;sample string 12&quot;,
+          &quot;LastInterventionDate&quot;: 1,
+          &quot;LastInterventionType&quot;: &quot;sample string 13&quot;,
+          &quot;PerforationDepth&quot;: &quot;sample string 14&quot;,
+          &quot;PressureData&quot;: &quot;sample string 15&quot;,
+          &quot;Pvt&quot;: &quot;sample string 16&quot;,
+          &quot;ReservoirData&quot;: &quot;sample string 17&quot;,
+          &quot;IsActive&quot;: true,
+          &quot;ListOfSectionOfWellDto&quot;: [
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            },
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            }
+          ]
+        },
+        {
+          &quot;Id&quot;: 1,
+          &quot;WellGroupId&quot;: 2,
+          &quot;SketchDesc&quot;: &quot;sample string 3&quot;,
+          &quot;WellType&quot;: &quot;sample string 4&quot;,
+          &quot;FlowType&quot;: &quot;sample string 5&quot;,
+          &quot;Comment&quot;: &quot;sample string 6&quot;,
+          &quot;Name&quot;: &quot;sample string 7&quot;,
+          &quot;Description&quot;: &quot;sample string 8&quot;,
+          &quot;ProductionHistory&quot;: &quot;sample string 9&quot;,
+          &quot;CompletionType&quot;: &quot;sample string 10&quot;,
+          &quot;DrillingDate&quot;: 1,
+          &quot;FormationCompleteState&quot;: &quot;sample string 11&quot;,
+          &quot;IntegrityStatus&quot;: &quot;sample string 12&quot;,
+          &quot;LastInterventionDate&quot;: 1,
+          &quot;LastInterventionType&quot;: &quot;sample string 13&quot;,
+          &quot;PerforationDepth&quot;: &quot;sample string 14&quot;,
+          &quot;PressureData&quot;: &quot;sample string 15&quot;,
+          &quot;Pvt&quot;: &quot;sample string 16&quot;,
+          &quot;ReservoirData&quot;: &quot;sample string 17&quot;,
+          &quot;IsActive&quot;: true,
+          &quot;ListOfSectionOfWellDto&quot;: [
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            },
+            {
+              &quot;WellId&quot;: 1,
+              &quot;Id&quot;: &quot;0e05804d-d51f-46ae-aa83-8b01e2dd2700&quot;,
+              &quot;IsVisible&quot;: true,
+              &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+            }
+          ]
+        }
+      ],
+      &quot;ListOfSectionOfWroupDto&quot;: [
+        {
+          &quot;WroupId&quot;: 1,
+          &quot;Id&quot;: &quot;962c5415-45c7-4a39-89bf-868da8756bb9&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        },
+        {
+          &quot;WroupId&quot;: 1,
+          &quot;Id&quot;: &quot;962c5415-45c7-4a39-89bf-868da8756bb9&quot;,
+          &quot;IsVisible&quot;: true,
+          &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+        }
+      ]
+    }
+  ],
+  &quot;ListOfSectionOfWieldDto&quot;: [
+    {
+      &quot;WieldId&quot;: 1,
+      &quot;Id&quot;: &quot;ce298947-29a8-49e6-a6d7-7eff0d9e862c&quot;,
+      &quot;IsVisible&quot;: true,
+      &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;WieldId&quot;: 1,
+      &quot;Id&quot;: &quot;ce298947-29a8-49e6-a6d7-7eff0d9e862c&quot;,
+      &quot;IsVisible&quot;: true,
+      &quot;SectionPatternId&quot;: &quot;sample string 4&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WellFieldDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Description&gt;sample string 3&lt;/Description&gt;
+  &lt;Id&gt;1&lt;/Id&gt;
+  &lt;ListOfSectionOfWieldDto&gt;
+    &lt;SectionOfWieldDto&gt;
+      &lt;Id&gt;ce298947-29a8-49e6-a6d7-7eff0d9e862c&lt;/Id&gt;
+      &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+      &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+      &lt;WieldId&gt;1&lt;/WieldId&gt;
+    &lt;/SectionOfWieldDto&gt;
+    &lt;SectionOfWieldDto&gt;
+      &lt;Id&gt;ce298947-29a8-49e6-a6d7-7eff0d9e862c&lt;/Id&gt;
+      &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+      &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+      &lt;WieldId&gt;1&lt;/WieldId&gt;
+    &lt;/SectionOfWieldDto&gt;
+  &lt;/ListOfSectionOfWieldDto&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;WellGroupsDto&gt;
+    &lt;WellGroupDto&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;ListOfSectionOfWroupDto&gt;
+        &lt;SectionOfWroupDto&gt;
+          &lt;Id&gt;962c5415-45c7-4a39-89bf-868da8756bb9&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;WroupId&gt;1&lt;/WroupId&gt;
+        &lt;/SectionOfWroupDto&gt;
+        &lt;SectionOfWroupDto&gt;
+          &lt;Id&gt;962c5415-45c7-4a39-89bf-868da8756bb9&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;WroupId&gt;1&lt;/WroupId&gt;
+        &lt;/SectionOfWroupDto&gt;
+      &lt;/ListOfSectionOfWroupDto&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;WellFieldId&gt;4&lt;/WellFieldId&gt;
+      &lt;WellsDto&gt;
+        &lt;WellDto&gt;
+          &lt;Comment&gt;sample string 6&lt;/Comment&gt;
+          &lt;CompletionType&gt;sample string 10&lt;/CompletionType&gt;
+          &lt;Description&gt;sample string 8&lt;/Description&gt;
+          &lt;DrillingDate&gt;1&lt;/DrillingDate&gt;
+          &lt;FlowType&gt;sample string 5&lt;/FlowType&gt;
+          &lt;FormationCompleteState&gt;sample string 11&lt;/FormationCompleteState&gt;
+          &lt;Id&gt;1&lt;/Id&gt;
+          &lt;IntegrityStatus&gt;sample string 12&lt;/IntegrityStatus&gt;
+          &lt;IsActive&gt;true&lt;/IsActive&gt;
+          &lt;LastInterventionDate&gt;1&lt;/LastInterventionDate&gt;
+          &lt;LastInterventionType&gt;sample string 13&lt;/LastInterventionType&gt;
+          &lt;ListOfSectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+          &lt;/ListOfSectionOfWellDto&gt;
+          &lt;Name&gt;sample string 7&lt;/Name&gt;
+          &lt;PerforationDepth&gt;sample string 14&lt;/PerforationDepth&gt;
+          &lt;PressureData&gt;sample string 15&lt;/PressureData&gt;
+          &lt;ProductionHistory&gt;sample string 9&lt;/ProductionHistory&gt;
+          &lt;Pvt&gt;sample string 16&lt;/Pvt&gt;
+          &lt;ReservoirData&gt;sample string 17&lt;/ReservoirData&gt;
+          &lt;SketchDesc&gt;sample string 3&lt;/SketchDesc&gt;
+          &lt;WellGroupId&gt;2&lt;/WellGroupId&gt;
+          &lt;WellType&gt;sample string 4&lt;/WellType&gt;
+        &lt;/WellDto&gt;
+        &lt;WellDto&gt;
+          &lt;Comment&gt;sample string 6&lt;/Comment&gt;
+          &lt;CompletionType&gt;sample string 10&lt;/CompletionType&gt;
+          &lt;Description&gt;sample string 8&lt;/Description&gt;
+          &lt;DrillingDate&gt;1&lt;/DrillingDate&gt;
+          &lt;FlowType&gt;sample string 5&lt;/FlowType&gt;
+          &lt;FormationCompleteState&gt;sample string 11&lt;/FormationCompleteState&gt;
+          &lt;Id&gt;1&lt;/Id&gt;
+          &lt;IntegrityStatus&gt;sample string 12&lt;/IntegrityStatus&gt;
+          &lt;IsActive&gt;true&lt;/IsActive&gt;
+          &lt;LastInterventionDate&gt;1&lt;/LastInterventionDate&gt;
+          &lt;LastInterventionType&gt;sample string 13&lt;/LastInterventionType&gt;
+          &lt;ListOfSectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+          &lt;/ListOfSectionOfWellDto&gt;
+          &lt;Name&gt;sample string 7&lt;/Name&gt;
+          &lt;PerforationDepth&gt;sample string 14&lt;/PerforationDepth&gt;
+          &lt;PressureData&gt;sample string 15&lt;/PressureData&gt;
+          &lt;ProductionHistory&gt;sample string 9&lt;/ProductionHistory&gt;
+          &lt;Pvt&gt;sample string 16&lt;/Pvt&gt;
+          &lt;ReservoirData&gt;sample string 17&lt;/ReservoirData&gt;
+          &lt;SketchDesc&gt;sample string 3&lt;/SketchDesc&gt;
+          &lt;WellGroupId&gt;2&lt;/WellGroupId&gt;
+          &lt;WellType&gt;sample string 4&lt;/WellType&gt;
+        &lt;/WellDto&gt;
+      &lt;/WellsDto&gt;
+    &lt;/WellGroupDto&gt;
+    &lt;WellGroupDto&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;Id&gt;1&lt;/Id&gt;
+      &lt;ListOfSectionOfWroupDto&gt;
+        &lt;SectionOfWroupDto&gt;
+          &lt;Id&gt;962c5415-45c7-4a39-89bf-868da8756bb9&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;WroupId&gt;1&lt;/WroupId&gt;
+        &lt;/SectionOfWroupDto&gt;
+        &lt;SectionOfWroupDto&gt;
+          &lt;Id&gt;962c5415-45c7-4a39-89bf-868da8756bb9&lt;/Id&gt;
+          &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+          &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+          &lt;WroupId&gt;1&lt;/WroupId&gt;
+        &lt;/SectionOfWroupDto&gt;
+      &lt;/ListOfSectionOfWroupDto&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;WellFieldId&gt;4&lt;/WellFieldId&gt;
+      &lt;WellsDto&gt;
+        &lt;WellDto&gt;
+          &lt;Comment&gt;sample string 6&lt;/Comment&gt;
+          &lt;CompletionType&gt;sample string 10&lt;/CompletionType&gt;
+          &lt;Description&gt;sample string 8&lt;/Description&gt;
+          &lt;DrillingDate&gt;1&lt;/DrillingDate&gt;
+          &lt;FlowType&gt;sample string 5&lt;/FlowType&gt;
+          &lt;FormationCompleteState&gt;sample string 11&lt;/FormationCompleteState&gt;
+          &lt;Id&gt;1&lt;/Id&gt;
+          &lt;IntegrityStatus&gt;sample string 12&lt;/IntegrityStatus&gt;
+          &lt;IsActive&gt;true&lt;/IsActive&gt;
+          &lt;LastInterventionDate&gt;1&lt;/LastInterventionDate&gt;
+          &lt;LastInterventionType&gt;sample string 13&lt;/LastInterventionType&gt;
+          &lt;ListOfSectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+          &lt;/ListOfSectionOfWellDto&gt;
+          &lt;Name&gt;sample string 7&lt;/Name&gt;
+          &lt;PerforationDepth&gt;sample string 14&lt;/PerforationDepth&gt;
+          &lt;PressureData&gt;sample string 15&lt;/PressureData&gt;
+          &lt;ProductionHistory&gt;sample string 9&lt;/ProductionHistory&gt;
+          &lt;Pvt&gt;sample string 16&lt;/Pvt&gt;
+          &lt;ReservoirData&gt;sample string 17&lt;/ReservoirData&gt;
+          &lt;SketchDesc&gt;sample string 3&lt;/SketchDesc&gt;
+          &lt;WellGroupId&gt;2&lt;/WellGroupId&gt;
+          &lt;WellType&gt;sample string 4&lt;/WellType&gt;
+        &lt;/WellDto&gt;
+        &lt;WellDto&gt;
+          &lt;Comment&gt;sample string 6&lt;/Comment&gt;
+          &lt;CompletionType&gt;sample string 10&lt;/CompletionType&gt;
+          &lt;Description&gt;sample string 8&lt;/Description&gt;
+          &lt;DrillingDate&gt;1&lt;/DrillingDate&gt;
+          &lt;FlowType&gt;sample string 5&lt;/FlowType&gt;
+          &lt;FormationCompleteState&gt;sample string 11&lt;/FormationCompleteState&gt;
+          &lt;Id&gt;1&lt;/Id&gt;
+          &lt;IntegrityStatus&gt;sample string 12&lt;/IntegrityStatus&gt;
+          &lt;IsActive&gt;true&lt;/IsActive&gt;
+          &lt;LastInterventionDate&gt;1&lt;/LastInterventionDate&gt;
+          &lt;LastInterventionType&gt;sample string 13&lt;/LastInterventionType&gt;
+          &lt;ListOfSectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+            &lt;SectionOfWellDto&gt;
+              &lt;Id&gt;0e05804d-d51f-46ae-aa83-8b01e2dd2700&lt;/Id&gt;
+              &lt;IsVisible&gt;true&lt;/IsVisible&gt;
+              &lt;SectionPatternId&gt;sample string 4&lt;/SectionPatternId&gt;
+              &lt;WellId&gt;1&lt;/WellId&gt;
+            &lt;/SectionOfWellDto&gt;
+          &lt;/ListOfSectionOfWellDto&gt;
+          &lt;Name&gt;sample string 7&lt;/Name&gt;
+          &lt;PerforationDepth&gt;sample string 14&lt;/PerforationDepth&gt;
+          &lt;PressureData&gt;sample string 15&lt;/PressureData&gt;
+          &lt;ProductionHistory&gt;sample string 9&lt;/ProductionHistory&gt;
+          &lt;Pvt&gt;sample string 16&lt;/Pvt&gt;
+          &lt;ReservoirData&gt;sample string 17&lt;/ReservoirData&gt;
+          &lt;SketchDesc&gt;sample string 3&lt;/SketchDesc&gt;
+          &lt;WellGroupId&gt;2&lt;/WellGroupId&gt;
+          &lt;WellType&gt;sample string 4&lt;/WellType&gt;
+        &lt;/WellDto&gt;
+      &lt;/WellsDto&gt;
+    &lt;/WellGroupDto&gt;
+  &lt;/WellGroupsDto&gt;
+  &lt;WellRegionId&gt;4&lt;/WellRegionId&gt;
+&lt;/WellFieldDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WellFieldDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Changed well field</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"03d3c2195fba4d08845143708d68a979"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-WellField_id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:41 GMT -->
+</html>

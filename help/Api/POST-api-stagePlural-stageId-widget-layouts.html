@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-stagePlural-stageId-widget-layouts by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/{stagePlural}/{stageId}/widget-layouts</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/{stagePlural}/{stageId}/widget-layouts</h1>
+<div>
+    <p>Create new widget layout</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">stagePlural</td>
+                    <td class="parameter-documentation">
+                        <p>Stage string</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">stageId</td>
+                    <td class="parameter-documentation">
+                        <p>Stage id</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Widgout object</p>
+
+<a href="../ResourceModel77f9.html?modelName=WidgoutDto">WidgoutDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Widget layout id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Widget layout name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WidgockDtoList</td>
+                    <td class="parameter-documentation">
+                        <p>Widget layout blocks 3-3-3-3 or 4-4-4 or 12 or 3-9</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModel09ad.html?modelName=WidgockDto">WidgockDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: &quot;ebef7926-2782-4645-b51a-c8ae9a46421c&quot;,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;WidgockDtoList&quot;: [
+    {
+      &quot;Id&quot;: &quot;40d3a468-6afc-4be4-b3e6-de420b85a5de&quot;,
+      &quot;OrderNumber&quot;: 64,
+      &quot;ColumnCount&quot;: 64,
+      &quot;WidgoutId&quot;: &quot;401b07b2-9b0c-422a-96a8-762443d39c7a&quot;,
+      &quot;WidgetDtoList&quot;: [
+        {
+          &quot;Id&quot;: &quot;2faf4d7f-9882-427f-af2a-fdee6a9a286a&quot;,
+          &quot;Name&quot;: &quot;sample string 2&quot;,
+          &quot;IdOfSectionPattern&quot;: &quot;sample string 3&quot;,
+          &quot;WidgockId&quot;: &quot;4e5d7919-4a25-4dff-932f-fc3212d69e4f&quot;,
+          &quot;Opts&quot;: &quot;sample string 5&quot;,
+          &quot;OrderNumber&quot;: 64,
+          &quot;IdOfCntxStage&quot;: &quot;sample string 7&quot;
+        },
+        {
+          &quot;Id&quot;: &quot;2faf4d7f-9882-427f-af2a-fdee6a9a286a&quot;,
+          &quot;Name&quot;: &quot;sample string 2&quot;,
+          &quot;IdOfSectionPattern&quot;: &quot;sample string 3&quot;,
+          &quot;WidgockId&quot;: &quot;4e5d7919-4a25-4dff-932f-fc3212d69e4f&quot;,
+          &quot;Opts&quot;: &quot;sample string 5&quot;,
+          &quot;OrderNumber&quot;: 64,
+          &quot;IdOfCntxStage&quot;: &quot;sample string 7&quot;
+        }
+      ]
+    },
+    {
+      &quot;Id&quot;: &quot;40d3a468-6afc-4be4-b3e6-de420b85a5de&quot;,
+      &quot;OrderNumber&quot;: 64,
+      &quot;ColumnCount&quot;: 64,
+      &quot;WidgoutId&quot;: &quot;401b07b2-9b0c-422a-96a8-762443d39c7a&quot;,
+      &quot;WidgetDtoList&quot;: [
+        {
+          &quot;Id&quot;: &quot;2faf4d7f-9882-427f-af2a-fdee6a9a286a&quot;,
+          &quot;Name&quot;: &quot;sample string 2&quot;,
+          &quot;IdOfSectionPattern&quot;: &quot;sample string 3&quot;,
+          &quot;WidgockId&quot;: &quot;4e5d7919-4a25-4dff-932f-fc3212d69e4f&quot;,
+          &quot;Opts&quot;: &quot;sample string 5&quot;,
+          &quot;OrderNumber&quot;: 64,
+          &quot;IdOfCntxStage&quot;: &quot;sample string 7&quot;
+        },
+        {
+          &quot;Id&quot;: &quot;2faf4d7f-9882-427f-af2a-fdee6a9a286a&quot;,
+          &quot;Name&quot;: &quot;sample string 2&quot;,
+          &quot;IdOfSectionPattern&quot;: &quot;sample string 3&quot;,
+          &quot;WidgockId&quot;: &quot;4e5d7919-4a25-4dff-932f-fc3212d69e4f&quot;,
+          &quot;Opts&quot;: &quot;sample string 5&quot;,
+          &quot;OrderNumber&quot;: 64,
+          &quot;IdOfCntxStage&quot;: &quot;sample string 7&quot;
+        }
+      ]
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;WidgoutDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Id&gt;ebef7926-2782-4645-b51a-c8ae9a46421c&lt;/Id&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;WidgockDtoList&gt;
+    &lt;WidgockDto&gt;
+      &lt;ColumnCount&gt;64&lt;/ColumnCount&gt;
+      &lt;Id&gt;40d3a468-6afc-4be4-b3e6-de420b85a5de&lt;/Id&gt;
+      &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+      &lt;WidgetDtoList&gt;
+        &lt;WidgetDto&gt;
+          &lt;Id&gt;2faf4d7f-9882-427f-af2a-fdee6a9a286a&lt;/Id&gt;
+          &lt;IdOfCntxStage&gt;sample string 7&lt;/IdOfCntxStage&gt;
+          &lt;IdOfSectionPattern&gt;sample string 3&lt;/IdOfSectionPattern&gt;
+          &lt;Name&gt;sample string 2&lt;/Name&gt;
+          &lt;Opts&gt;sample string 5&lt;/Opts&gt;
+          &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+          &lt;WidgockId&gt;4e5d7919-4a25-4dff-932f-fc3212d69e4f&lt;/WidgockId&gt;
+        &lt;/WidgetDto&gt;
+        &lt;WidgetDto&gt;
+          &lt;Id&gt;2faf4d7f-9882-427f-af2a-fdee6a9a286a&lt;/Id&gt;
+          &lt;IdOfCntxStage&gt;sample string 7&lt;/IdOfCntxStage&gt;
+          &lt;IdOfSectionPattern&gt;sample string 3&lt;/IdOfSectionPattern&gt;
+          &lt;Name&gt;sample string 2&lt;/Name&gt;
+          &lt;Opts&gt;sample string 5&lt;/Opts&gt;
+          &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+          &lt;WidgockId&gt;4e5d7919-4a25-4dff-932f-fc3212d69e4f&lt;/WidgockId&gt;
+        &lt;/WidgetDto&gt;
+      &lt;/WidgetDtoList&gt;
+      &lt;WidgoutId&gt;401b07b2-9b0c-422a-96a8-762443d39c7a&lt;/WidgoutId&gt;
+    &lt;/WidgockDto&gt;
+    &lt;WidgockDto&gt;
+      &lt;ColumnCount&gt;64&lt;/ColumnCount&gt;
+      &lt;Id&gt;40d3a468-6afc-4be4-b3e6-de420b85a5de&lt;/Id&gt;
+      &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+      &lt;WidgetDtoList&gt;
+        &lt;WidgetDto&gt;
+          &lt;Id&gt;2faf4d7f-9882-427f-af2a-fdee6a9a286a&lt;/Id&gt;
+          &lt;IdOfCntxStage&gt;sample string 7&lt;/IdOfCntxStage&gt;
+          &lt;IdOfSectionPattern&gt;sample string 3&lt;/IdOfSectionPattern&gt;
+          &lt;Name&gt;sample string 2&lt;/Name&gt;
+          &lt;Opts&gt;sample string 5&lt;/Opts&gt;
+          &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+          &lt;WidgockId&gt;4e5d7919-4a25-4dff-932f-fc3212d69e4f&lt;/WidgockId&gt;
+        &lt;/WidgetDto&gt;
+        &lt;WidgetDto&gt;
+          &lt;Id&gt;2faf4d7f-9882-427f-af2a-fdee6a9a286a&lt;/Id&gt;
+          &lt;IdOfCntxStage&gt;sample string 7&lt;/IdOfCntxStage&gt;
+          &lt;IdOfSectionPattern&gt;sample string 3&lt;/IdOfSectionPattern&gt;
+          &lt;Name&gt;sample string 2&lt;/Name&gt;
+          &lt;Opts&gt;sample string 5&lt;/Opts&gt;
+          &lt;OrderNumber&gt;64&lt;/OrderNumber&gt;
+          &lt;WidgockId&gt;4e5d7919-4a25-4dff-932f-fc3212d69e4f&lt;/WidgockId&gt;
+        &lt;/WidgetDto&gt;
+      &lt;/WidgetDtoList&gt;
+      &lt;WidgoutId&gt;401b07b2-9b0c-422a-96a8-762443d39c7a&lt;/WidgoutId&gt;
+    &lt;/WidgockDto&gt;
+  &lt;/WidgockDtoList&gt;
+&lt;/WidgoutDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;WidgoutDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created widget layout</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"dfae84dfdf9040c983d577b1d8ed2f4d"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-stagePlural-stageId-widget-layouts by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:32 GMT -->
+</html>

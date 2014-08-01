@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-wells-idOfWell-nodal-analyzes by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>POST api/wells/{idOfWell}/nodal-analyzes</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST api/wells/{idOfWell}/nodal-analyzes</h1>
+<div>
+    <p>Post nodal analysis</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">idOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Well</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Nodal analysis DTO to create</p>
+
+<a href="../ResourceModel928f.html?modelName=NodalAnalysisOfWellDto">NodalAnalysisOfWellDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">IdOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Id of well</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfFileSpec</td>
+                    <td class="parameter-documentation">
+                        <p>Id of file specification</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Volume name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Volume description</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileSpecDto</td>
+                    <td class="parameter-documentation">
+                        <p>File specification for this volume</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../ResourceModela26d.html?modelName=FileSpecDto">FileSpecDto</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;IdOfWell&quot;: 1,
+  &quot;IdOfFileSpec&quot;: &quot;b69fa2f2-3279-468d-b87f-0587c45e850b&quot;,
+  &quot;Name&quot;: &quot;sample string 3&quot;,
+  &quot;Description&quot;: &quot;sample string 4&quot;,
+  &quot;FileSpecDto&quot;: {
+    &quot;Id&quot;: &quot;132d1100-ca5a-4d4f-a441-f688e9f085c0&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Extension&quot;: &quot;sample string 3&quot;,
+    &quot;ContentType&quot;: &quot;sample string 4&quot;,
+    &quot;Length&quot;: 5,
+    &quot;ContainerName&quot;: &quot;041d1ee7-5b58-46a5-9569-3427a94351ec&quot;,
+    &quot;CreatedUnixTime&quot;: 7,
+    &quot;FileUrl&quot;: &quot;sample string 8&quot;,
+    &quot;ImgWidth&quot;: 1,
+    &quot;ImgHeight&quot;: 1
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;NodalAnalysisOfWellDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Description&gt;sample string 4&lt;/Description&gt;
+  &lt;FileSpecDto&gt;
+    &lt;ContainerName&gt;041d1ee7-5b58-46a5-9569-3427a94351ec&lt;/ContainerName&gt;
+    &lt;ContentType&gt;sample string 4&lt;/ContentType&gt;
+    &lt;CreatedUnixTime&gt;7&lt;/CreatedUnixTime&gt;
+    &lt;Extension&gt;sample string 3&lt;/Extension&gt;
+    &lt;FileUrl&gt;sample string 8&lt;/FileUrl&gt;
+    &lt;Id&gt;132d1100-ca5a-4d4f-a441-f688e9f085c0&lt;/Id&gt;
+    &lt;ImgHeight&gt;1&lt;/ImgHeight&gt;
+    &lt;ImgWidth&gt;1&lt;/ImgWidth&gt;
+    &lt;Length&gt;5&lt;/Length&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/FileSpecDto&gt;
+  &lt;IdOfFileSpec&gt;b69fa2f2-3279-468d-b87f-0587c45e850b&lt;/IdOfFileSpec&gt;
+  &lt;IdOfWell&gt;1&lt;/IdOfWell&gt;
+  &lt;Name&gt;sample string 3&lt;/Name&gt;
+&lt;/NodalAnalysisOfWellDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;NodalAnalysisOfWellDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Created model</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"1b7b5581f99a4d52825640a6698fc0cb"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/POST-api-wells-idOfWell-nodal-analyzes by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:37 GMT -->
+</html>

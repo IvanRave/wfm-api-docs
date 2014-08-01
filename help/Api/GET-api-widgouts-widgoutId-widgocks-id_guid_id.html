@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>Ошибка сервера в приложении '/'.<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Описание: </b>Необработанное исключение при выполнении текущего веб-запроса. Изучите трассировку стека для получения дополнительных сведений о данной ошибке и о вызвавшем ее фрагменте кода.
+
+            <br><br>
+
+            <b> Сведения об исключении: </b>System.Web.HttpException: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).<br><br>
+
+            <b>Ошибка источника:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+Необработанное исключение при выполнении текущего веб-запроса. Информацию о происхождении и месте возникновения исключения можно получить, используя следующую трассировку стека исключений.</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>Трассировка стека:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[HttpException (0x80004005): Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).]
+   System.Web.HttpRequest.ValidateInputIfRequiredByConfig() +9734452
+   System.Web.PipelineStepManager.ValidateHelper(HttpContext context) +53
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>Информация о версии:</b>&nbsp;Платформа Microsoft .NET Framework, версия:4.0.30319; ASP.NET, версия:4.0.30319.34009
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpException]: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).
+   в System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   в System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+-->

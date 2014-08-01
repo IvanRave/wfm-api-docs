@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-wells-idOfWell-logs-id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PUT api/wells/{idOfWell}/logs/{id}</title>
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="../../css/help-page.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT api/wells/{idOfWell}/logs/{id}</h1>
+<div>
+    <p>Put log: change name, description. FileSpec and Well can&#39;t be changed</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">idOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Id of well (parent)</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">id</td>
+                    <td class="parameter-documentation">
+                        <p>Id</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Log of well</p>
+
+<a href="../ResourceModelde6e.html?modelName=LogOfWellDto">LogOfWellDto</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Id of log: autogenerate on the controller</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfWell</td>
+                    <td class="parameter-documentation">
+                        <p>Id of well (parent)</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IdOfFileSpec</td>
+                    <td class="parameter-documentation">
+                        <p>Id of file of text file</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Log name: by default - file name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                                <p>Max length: 255</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Log decription: by default - empty</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ListOfSvgElemDto</td>
+                    <td class="parameter-documentation">
+                        <p>List of svg elems</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../ResourceModele19c.html?modelName=SvgElemDto">SvgElemDto</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: &quot;99c7a7b6-db75-4f3e-bcaf-88ef4db9173f&quot;,
+  &quot;IdOfWell&quot;: 2,
+  &quot;IdOfFileSpec&quot;: &quot;c4a3883b-b123-4ab6-b5a3-5656ff1e6d17&quot;,
+  &quot;Name&quot;: &quot;sample string 4&quot;,
+  &quot;Description&quot;: &quot;sample string 5&quot;,
+  &quot;ListOfSvgElemDto&quot;: [
+    {
+      &quot;Id&quot;: &quot;9e909a26-aa38-46df-a446-b717f17354cc&quot;,
+      &quot;Color&quot;: &quot;sample string 2&quot;,
+      &quot;Tpe&quot;: &quot;sample string 3&quot;,
+      &quot;Opts&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;Id&quot;: &quot;9e909a26-aa38-46df-a446-b717f17354cc&quot;,
+      &quot;Color&quot;: &quot;sample string 2&quot;,
+      &quot;Tpe&quot;: &quot;sample string 3&quot;,
+      &quot;Opts&quot;: &quot;sample string 4&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;LogOfWellDto xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Reyvart.WellFileManager.Web.Models&quot;&gt;
+  &lt;Description&gt;sample string 5&lt;/Description&gt;
+  &lt;Id&gt;99c7a7b6-db75-4f3e-bcaf-88ef4db9173f&lt;/Id&gt;
+  &lt;IdOfFileSpec&gt;c4a3883b-b123-4ab6-b5a3-5656ff1e6d17&lt;/IdOfFileSpec&gt;
+  &lt;IdOfWell&gt;2&lt;/IdOfWell&gt;
+  &lt;ListOfSvgElemDto&gt;
+    &lt;SvgElemDto&gt;
+      &lt;Color&gt;sample string 2&lt;/Color&gt;
+      &lt;Id&gt;9e909a26-aa38-46df-a446-b717f17354cc&lt;/Id&gt;
+      &lt;Opts&gt;sample string 4&lt;/Opts&gt;
+      &lt;Tpe&gt;sample string 3&lt;/Tpe&gt;
+    &lt;/SvgElemDto&gt;
+    &lt;SvgElemDto&gt;
+      &lt;Color&gt;sample string 2&lt;/Color&gt;
+      &lt;Id&gt;9e909a26-aa38-46df-a446-b717f17354cc&lt;/Id&gt;
+      &lt;Opts&gt;sample string 4&lt;/Opts&gt;
+      &lt;Tpe&gt;sample string 3&lt;/Tpe&gt;
+    &lt;/SvgElemDto&gt;
+  &lt;/ListOfSvgElemDto&gt;
+  &lt;Name&gt;sample string 4&lt;/Name&gt;
+&lt;/LogOfWellDto&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+    <div class="warning-message-container">
+        <p>Failed to generate the sample for media type &#39;application/x-www-form-urlencoded&#39;. Cannot use formatter &#39;JQueryMvcFormUrlEncodedFormatter&#39; to write type &#39;LogOfWellDto&#39;.</p>
+    </div>
+
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Changel log of well DTO</p>
+
+<a href="../ResourceModel97c9.html?modelName=IHttpActionResult">IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"086bfe1b5f45441487203bf22fcc6084"}
+</script>
+<script type="text/javascript" src="http://localhost:49966/c46e13463ec44cb8ad74aa27153360cd/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:17171/Help/Api/PUT-api-wells-idOfWell-logs-id by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Aug 2014 12:18:38 GMT -->
+</html>
