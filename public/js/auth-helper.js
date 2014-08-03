@@ -58,17 +58,19 @@
 			cache : false,
 			type : 'POST',
 			// need for CORS requests without preflight request
-			contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
-			// TODO: #41! generate this string using one command
-			data : 'code=' + reqBody.code + '&client_id=' + reqBody.client_id + '&redirect_uri=' + reqBody.redirect_uri,
-			xhrFields : {
-				// For CORS request to send and receive cookies
-				withCredentials : true
-			}
+			// contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
+			// No need cookies - Safari doesn't set 3-rd side cookies (with default settings)
+			// xhrFields : {
+			// // For CORS request to send and receive cookies
+			// withCredentials : true
+			// }
 		};
 
+		var reqUri = app.cnst.API_URI + '/api/account/session';
+		reqUri += '?' + 'code=' + reqBody.code + '&client_id=' + reqBody.client_id + '&redirect_uri=' + encodeURIComponent(reqBody.redirect_uri);
+
 		// No response, just set cookies
-		$.ajax(app.cnst.API_URI + '/api/account/session', options).done(scsNext).fail(failNext);
+		$.ajax(reqUri, options).done(scsNext).fail(failNext);
 	};
 
 	var openAuth = function (next) {
@@ -89,15 +91,30 @@
 		authScope.authWindow = window.open(authUri +
 				'?response_type=code' +
 				'&client_id=' + idOfAuthClient +
-				'&redirect_uri=' + redirectUri,
+				'&redirect_uri=' + encodeURIComponent(redirectUri),
 				'_blank',
 				'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 	};
 
-	var handleScs = function (jqrTarget, accountInfoData) {
+	/**
+	 * Handle a success response from a server
+	 * @param {Object} jqrTarget - A button, fired this event
+	 * @param {Object} sessionOfUser - { uname, accessToken, expiredIn (in seconds)}
+	 */
+	var handleScs = function (jqrTarget, sessionOfUser) {
 		jqrTarget.hide();
-    $('#uname-container').text(accountInfoData.uname);
-		console.log('response from wfm-node');
+		$('#uname-container').text(sessionOfUser.uname);
+
+		// save accessToken to cookies (or store in code?)
+		// in cookies - every request (simple image or js code - with cookie)
+		// in code - when update a page - lost a session (but - one click authorization)
+		app.sessionOfUser = sessionOfUser;
+
+		window.authorizations.add("key", new window.ApiKeyAuthorization("access_token",
+				sessionOfUser.accessToken,
+				"query"));
+
+		console.log('response from wfm-node', app.sessionOfUser);
 	};
 
 	var handleFail = function (jqXhr) {

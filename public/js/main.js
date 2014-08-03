@@ -8,10 +8,10 @@ $(function () {
 	if (!app.lgr) {
 		throw new Error('required lgr-helper');
 	}
-  
-  if (!app.cnst){
-    throw new Error('required cnst-helper');
-  }
+
+	if (!app.cnst) {
+		throw new Error('required cnst-helper');
+	}
 
 	// url parameter should point to a resource listing url as per Swagger Spec
 	// dom_id parameter is the the id of a dom element inside which SwaggerUi will put the user interface for swagger
@@ -22,7 +22,7 @@ $(function () {
 	// All other parameters are explained in greater detail below
 
 	window.swaggerUi = new window.SwaggerUi({
-			url :  app.cnst.API_URI + "/api/api-docs",
+			url : app.cnst.API_URI + "/api/api-docs",
 			dom_id : app.cnst.BASE_CONTAINER,
 			supportedSubmitMethods : ['get', 'post', 'put', 'delete'],
 			//useJQuery : true,
@@ -49,22 +49,6 @@ $(function () {
 			},
 			docExpansion : "none"
 		});
-
-	$('#input_apiKey').change(function () {
-		var key = $('#input_apiKey')[0].value;
-
-		app.lgr.info({
-			"key" : key
-		});
-
-		if (key && key.trim() !== "") {
-			app.lgr.info({
-				"added key" : key
-			});
-
-			window.authorizations.add("key", new window.ApiKeyAuthorization("api_key", key, "query"));
-		}
-	});
 
 	// send requests with cookies
 	//window.authorizations.add("key", new CookieAuthorization());
