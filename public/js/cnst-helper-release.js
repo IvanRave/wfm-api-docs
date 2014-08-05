@@ -4,6 +4,10 @@
 	// REQ
 	app.cnst.API_URI = 'https://wfm-report.herokuapp.com';
   
+  app.cnst.SESSION_ENDPOINT = app.cnst.API_URI + '/api/account/session';
+  
+  app.cnst.LOGOFF_ENDPOINT = app.cnst.API_URI + '/api/account/logoff';
+  
   app.cnst.BASE_CONTAINER = 'swagger-ui-container';
 
 	// AUTH
