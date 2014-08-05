@@ -38,6 +38,26 @@
 		}
 	};
 
+	var reqLogout = function () {
+		var authHeader = window.authorizations.authz['oauth2'].value;
+
+		var reqUri = app.cnst.LOGOFF_ENDPOINT;
+		var options = {
+			cache : false,
+			type : 'GET',
+			headers : {
+				'Authorization' : authHeader
+			}
+		};
+
+		$.ajax(reqUri, options).done(function () {
+			window.authorizations.remove('oauth2');
+		}).fail(function (err) {
+			console.log(err);
+			alert('Error to logout');
+		});
+	};
+
 	var handleAuthResult = function (scsNext, failNext, authResult) {
 		var resultObj = app.urlHelper.calcObjFromUrl(authResult);
 
@@ -66,10 +86,9 @@
 			// }
 		};
 
-		var reqUri = app.cnst.API_URI + '/api/account/session';
+		var reqUri = app.cnst.SESSION_ENDPOINT;
 		reqUri += '?' + 'code=' + reqBody.code + '&client_id=' + reqBody.client_id + '&redirect_uri=' + encodeURIComponent(reqBody.redirect_uri);
 
-		// No response, just set cookies
 		$.ajax(reqUri, options).done(scsNext).fail(failNext);
 	};
 
@@ -102,17 +121,23 @@
 	 * @param {Object} sessionOfUser - { uname, accessToken, expiredIn (in seconds)}
 	 */
 	var handleScs = function (jqrTarget, sessionOfUser) {
-		jqrTarget.hide();
 		$('#uname-container').text(sessionOfUser.uname);
+		$('#login-false-block').hide();
+		jqrTarget.removeAttr('disabled');
+		$('#login-true-block').show();
 
 		// save accessToken to cookies (or store in code?)
 		// in cookies - every request (simple image or js code - with cookie)
 		// in code - when update a page - lost a session (but - one click authorization)
 		app.sessionOfUser = sessionOfUser;
 
-		window.authorizations.add("key", new window.ApiKeyAuthorization("access_token",
-				sessionOfUser.accessToken,
-				"query"));
+		// window.authorizations.add("key", new window.ApiKeyAuthorization("access_token",
+		// sessionOfUser.accessToken,
+		// "query"));
+
+		window.authorizations.add("oauth2", new window.ApiKeyAuthorization("Authorization",
+				"Bearer " + sessionOfUser.accessToken,
+				"header"));
 
 		console.log('response from wfm-node', app.sessionOfUser);
 	};
@@ -129,7 +154,7 @@
 		console.log('error from wfm-node', jqXhr);
 	};
 
-	app.authHelper.clickOpenAuthBtn = function (clickEvent) {
+	app.authHelper.clickLoginBtn = function (clickEvent) {
 		var jqrTarget = $(clickEvent.currentTarget);
 		jqrTarget.attr({
 			disabled : true
@@ -138,5 +163,13 @@
 		// Entire process
 		openAuth(handleAuthResult.bind(null,
 				handleScs.bind(null, jqrTarget), handleFail));
+	};
+
+	app.authHelper.clickLogoutBtn = function () {
+		$('#login-true-block').hide();
+		$('#uname-container').text('');
+		$('#login-false-block').show();
+
+		reqLogout();
 	};
 })(window.wfm);

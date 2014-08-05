@@ -21,39 +21,39 @@ $(function () {
 	// onFailure is a callback function parameter which can be passed to be notified of when SwaggerUI encountered a failure was unable to render.
 	// All other parameters are explained in greater detail below
 
+	var cbkOnFailure = function (data) {
+		app.lgr.info({
+			"Unable to Load SwaggerUI" : data
+		});
+	};
+
+	var cbkOnComplete = function () { // swaggerApi, swaggerUi
+		app.lgr.info("Loaded SwaggerUI");
+		// // if (typeof initOAuth === "function") {
+		// // initOAuth({
+		// // clientId : app.cnst.auth.ID_OF_AUTH_CLIENT,
+		// // realm : "api-realm",
+		// // appName : "api-docs-app"
+		// // });
+		// // }
+
+		$('pre code').each(function (i, e) {
+			window.hljs.highlightBlock(e);
+		});
+	};
+
 	window.swaggerUi = new window.SwaggerUi({
 			url : app.cnst.API_URI + "/api/api-docs",
 			dom_id : app.cnst.BASE_CONTAINER,
 			supportedSubmitMethods : ['get', 'post', 'put', 'delete'],
 			//useJQuery : true,
-			onComplete : function () { // swaggerApi, swaggerUi
-				app.lgr.info("Loaded SwaggerUI");
-
-				if (typeof initOAuth === "function") {
-					/*
-					initOAuth({
-					clientId: "your-client-id",
-					realm: "your-realms",
-					appName: "your-app-name"
-					});
-					 */
-				}
-				$('pre code').each(function (i, e) {
-					window.hljs.highlightBlock(e);
-				});
-			},
-			onFailure : function (data) {
-				app.lgr.info({
-					"Unable to Load SwaggerUI" : data
-				});
-			},
+			onComplete : cbkOnComplete,
+			onFailure : cbkOnFailure,
 			docExpansion : "none"
 		});
 
-	// send requests with cookies
-	//window.authorizations.add("key", new CookieAuthorization());
-
 	window.swaggerUi.load();
 
-	$('#openAuthBtn').on('click', app.authHelper.clickOpenAuthBtn);
+	$('#login-btn').on('click', app.authHelper.clickLoginBtn);
+	$('#logout-btn').on('click', app.authHelper.clickLogoutBtn);
 });
