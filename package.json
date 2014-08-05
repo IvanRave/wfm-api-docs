@@ -12,11 +12,13 @@
     "express": "^4.7.4"
   },
   "devDependencies": {
+    "del": "^0.1.1",
     "grunt": "^0.4.5",
     "grunt-git-log": "git://github.com/IvanRave/grunt-git-log.git",
     "gulp": "^3.8.7",
     "gulp-gh-pages": "^0.3.3",
     "gulp-jshint": "^1.8.4",
+    "gulp-rename": "^1.2.0",
     "jshint-stylish": "^0.2.0"
   }
 }
