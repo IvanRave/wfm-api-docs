@@ -41,10 +41,10 @@
 	var reqLogout = function () {
 		var authHeader = window.authorizations.authz['oauth2'].value;
 
-		var reqUri = app.cnst.LOGOFF_ENDPOINT;
+		var reqUri = app.cnst.SESSION_ENDPOINT;
 		var options = {
 			cache : false,
-			type : 'GET',
+			type : 'DELETE',
 			headers : {
 				'Authorization' : authHeader
 			}
